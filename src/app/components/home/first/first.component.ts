@@ -12,16 +12,25 @@ export class FirstComponent implements AfterViewInit {
   config: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
-    slidesPerView: 4,
+    slidesPerView: 2,
     keyboard: true,
     mousewheel: false,
     scrollbar: false,
     pagination: true,
-    spaceBetween: 5,
+    spaceBetween: 2,
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev'
     },
+    autoplay: {
+      delay: 1500, 
+      disableOnInteraction: false, 
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3
+      }
+    }
   };
   constructor(
     public yeoman:Yeoman
