@@ -1,0 +1,18 @@
+.orange-button {
+    background-color: #ff5e15;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 10px;
+  }
+  
+  .orange-button:hover {
+    background-color: #ff5e15;
+  }
+
+  .breadcrumb-item {
+    color: #777;
+  }

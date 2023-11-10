@@ -1,0 +1,17 @@
+.whatsapp-btn-mobile{
+    background-color: #28a745;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.875rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    position: absolute;
+    right: 4.25rem;
+    text-align: center;
+    top: 50%;
+    width: 2.5rem;
+    margin-top: -1.25rem;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}

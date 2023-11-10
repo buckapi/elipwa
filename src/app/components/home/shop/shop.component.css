@@ -1,0 +1,68 @@
+.shadow-style {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  .fixed-size {
+    width: 200px;
+    height: 200px;
+  }
+  
+  .left-align {
+    text-align: left;
+  }
+  
+  .left-align span {
+    background-color: #ff5e15;
+  }
+
+  .orange-button {
+    background-color: #ff5e15;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding-top: 10px;
+  }
+  
+  .orange-button:hover {
+    background-color: #ff5e15;
+  }
+
+  .filter-inner {
+    display: -webkit-inline-box;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  .category-label {
+    margin-right: 10px;
+  }
+  
+  .select-wrapper {
+    flex: 1;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #000;
+    background-color: #fff;
+  }
+  .file-browse-button {
+    background: aquamarine;
+
+}
+ .content-input input,
+ .content-select select{
+ 	appearance: none;
+ 	-webkit-appearance: none;
+ 	-moz-appearance: none;
+ }
+.content-select select{
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}

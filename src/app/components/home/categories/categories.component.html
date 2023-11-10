@@ -1,0 +1,37 @@
+<section>
+    <div class="w-100 pt-100 paralx-70 blue-layer opc7 position-relative">
+        <div class="fixed-bg" style="background-image: url(assets/aceros/images/parallax1.jpg);"></div>
+        <div class="container" style="text-align: center;">
+            <div class="sec-title w-100">
+                <div class="sec-title-inner d-inline-block">
+                    <span class="d-block thm-clr">Nuestros productos</span>
+                    <h3 class="mb-0" >Categorias</h3>
+                </div>
+            </div>
+        </div>
+        <div class="proj-wrap px-70 w-100">
+          <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+              <swiper [config]="config2">
+                <div class="swiper-wrapper">
+                  <!-- <div class="row proj-caro"> -->
+                    <div class="swiper-slide col-md-4 col-sm-6 col-lg-3" *ngFor="let category of categories; let i = index" (click)="setRoute('shop')">
+                        <div class="proj-box position-relative w-100">
+                          <div class="proj-thumb overflow-hidden w-100">
+                            <img src="assets/aceros/images/icono.png" alt="categorias" style="max-width: 10%;">
+                          </div>
+                          <div class="proj-info position-absolute">
+                           
+                            <h3 class="mb-0" style="cursor:pointer;"><a title="">{{ category.name }}</a></h3>
+                          </div>
+                        </div>
+                      </div>                       
+                  <!-- </div> -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+              </swiper>
+        </div>
+    </div>
+</section>
