@@ -1,11 +1,4 @@
-<!-- <div id="bethany-page-loading" class="bethany-pageloading">
-    <div class="bethany-pageloading-inner"> 
-        <img src="assets/assetsEli/images/logo-dark.png" class="logo" alt=""> 
-    </div>
-  </div> -->
-  <!-- Navigation -->
- 
-  <!-- Slider & Services -->
+
   <div class="bethany-homepage-slider">
     <div class="container">
         <div class="row">
@@ -18,41 +11,14 @@
                         <div class="bethany-slider">
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/services/1.jpg" alt="">
+                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="setRoute('shop')">
+                                        <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
                                             <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">Newbornbaby</a></div>
+                                                <div class="bethany-slider-subtitle"><a href="services-page.html">{{ category.name }}</a></div>
                                                 <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
                                             </div>
                                     </div>
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/services/1.jpg" alt="">
-                                            <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">Newbornbaby</a></div>
-                                                <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                            </div>
-                                    </div>
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/services/1.jpg" alt="">
-                                            <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">Newbornbaby</a></div>
-                                                <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                            </div>
-                                    </div>
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/services/1.jpg" alt="">
-                                            <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">Newbornbaby</a></div>
-                                                <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                            </div>
-                                    </div>
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/services/1.jpg" alt="">
-                                            <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">Newbornbaby</a></div>
-                                                <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                            </div>
-                                    </div>
+                                 
                                 </div>
                             </swiper>
                     <!-- <div class="bethany-slider-item">
@@ -128,7 +94,7 @@
 </div>
 </div>
 <!-- Wedding Dates -->
-<!-- <div class="section-padding bg-1">
+ <div class="section-padding bg-1">
 <div class="container">
     <div class="row">
         <div class="col-md-5 mb-30">
@@ -141,7 +107,7 @@
                 <tbody>
                     <tr>
                         <td>
-                            <h6>1. SWITZERLAND<br><span>{September : 2022}</span></h6>
+                            <h6>1. SWITZERLAND<br><span>September : 2022</span></h6>
                         </td>
                         <td>
                             <p>Bauen</p>
@@ -149,7 +115,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <h6>2. ITALY<br><span>{October : 2022}</span></h6>
+                            <h6>2. ITALY<br><span>October : 2022</span></h6>
                         </td>
                         <td>
                             <p>Rome</p>
@@ -157,7 +123,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <h6>3. AMSTERDAM<br><span>{November : 2022}</span></h6>
+                            <h6>3. AMSTERDAM<br><span>November : 2022</span></h6>
                         </td>
                         <td>
                             <p>Netherlands</p>
@@ -165,7 +131,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <h6>4. SPAIN<br><span>{December : 2022}</span></h6>
+                            <h6>4. SPAIN<br><span>December : 2022</span></h6>
                         </td>
                         <td>
                             <p>Barcelona</p>
@@ -176,7 +142,140 @@
         </div>
     </div>
 </div>
-</div> -->
+</div> 
+<div class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Our Packages</h2>
+                <hr class="line line-hr-center">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="setRoute('shop')">
+                <div class="services-item" >
+                    <img class="services-img" src="assets/assetsEli/images/services/1.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">{{packages.name}}</a></div>
+                                <div class="services-title"><a href="services-page.html">{{packages.price}}</a></div>
+                        </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Master of Ceremonies</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/3.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Corporate Events</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/4.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
+                                <div class="services-title"><a href="services-page.html">Destination Wedding</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/5.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Birthday Party Planner</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/6.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Special Events</a></div>
+                        </div>
+                </div> 
+            </div>-->
+        </div>
+    </div>
+</div>
+<div class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Our Products</h2>
+                <hr class="line line-hr-center">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('shop')" [hidden]="i > 5">
+<!--                 <div class="col-md-4" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('shop')" [hidden]="i >= 5">
+ -->                <div class="services-item" >
+                    <img class="services-img" src="{{products.images[0]}}" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">{{products.name}}</a></div>
+                                <div class="services-title"><a href="services-page.html">{{products.price}}</a></div>
+                        </div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Master of Ceremonies</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/3.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Corporate Events</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/4.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
+                                <div class="services-title"><a href="services-page.html">Destination Wedding</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/5.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Birthday Party Planner</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/6.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Special Events</a></div>
+                        </div>
+                </div> 
+            </div>-->
+        </div>
+    </div>
+</div>
 <div class="section-padding" style="padding: 20px 0;">
 <div class="container">
     <div class="row">

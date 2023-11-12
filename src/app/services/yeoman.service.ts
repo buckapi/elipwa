@@ -65,7 +65,10 @@ export class Yeoman {
   cards:any[]=[]; 
 
   serialT:number=0;
-
+  package:any={};
+  allAlbums:any=[];
+  allPackages:any=[];
+  allProducts:any=[];
   config: {
     clientSelected:number;
   } = {clientSelected:-1} ;

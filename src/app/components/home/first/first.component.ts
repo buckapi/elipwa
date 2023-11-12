@@ -1,7 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
-import { CATEGORIES } from '@app/services/categories.services';
 import { SwiperOptions } from 'swiper';
+import { RestService } from '@app/services/rest.service';
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
@@ -9,6 +9,9 @@ import { SwiperOptions } from 'swiper';
 })
 export class FirstComponent implements AfterViewInit {
   categories:any;
+  allPackages:any;
+  allProducts:any;
+  products:any;
   config: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
@@ -33,11 +36,29 @@ export class FirstComponent implements AfterViewInit {
     }
   };
   constructor(
-    public yeoman:Yeoman
+    public yeoman:Yeoman,
+    public restService:RestService
   ) 
   {
-    this.categories=CATEGORIES
+    this.loadCategories();
+    this.getAllPackages();
+    this.getAllProducts();
    }
+   loadCategories(){
+    this.restService.getAllCategory().subscribe(response=>{
+      this.categories=response;
+    });
+  }
+  getAllPackages(){
+    this.restService.getAllPackages().subscribe(response=>{
+      this.allPackages=response;
+    });
+  }
+  getAllProducts(){
+    this.restService.getAllProducts().subscribe(response=>{
+      this.allProducts=response;
+    });
+  }
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;

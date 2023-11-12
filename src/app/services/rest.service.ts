@@ -31,18 +31,35 @@ export interface TicketInterface {
 export interface SerialInterface {
 	serialT:string,
 }
+export interface ClientInterface {
+
+}
+export interface CarInterface {
+}
+export interface ProductInterface {
+}
+export interface PartInterface {
+}
+export interface CategoryInterface {
+
+}
 @Injectable({
   providedIn: 'root'
 })
 export class RestService {
 	messages:any;
-		order:any;
+	order:any;
 	cards:any;
 	customerss:any;
 	branch:any;
 	cierre:any;
 	serial:any;
 	transactions:any;
+	albums:any;
+	services:any;
+	products:any;
+	packages:any;
+	categories:any;
 	url:any="https://db.buckapi.com:9032";
 	members:any;
 	private urlAPIEmail = 'https://pcwdfcc885.execute-api.us-east-2.amazonaws.com/api/test';
@@ -128,126 +145,185 @@ export class RestService {
 	// 	return this.http.get(url_api);
 	// }
 
-	getAllCategory(){
-		const url_api = this.yeoman.origin.restUrl+'/api/categories';
-		return this.http.get(url_api);
-	}
-	getAllTransactions(){
-		const url_api =  this.url+'/api/transactions';
-		return this.http.get(url_api);
-	}
-	getAllMembers(){
-		const url_api =  this.url+'/api/cards';
-		return this.http.get(url_api);
-	}
-	updateSpecialty(specialty :SpecialtyInterface, id: string){
-		const url_api=`${this.url}/api/branchs/${id}`;
-		return this.http
-		.put<SpecialtyInterface>(url_api, specialty)
-		.pipe(map(data => data));
-	}
-
-	saveOrder(order :OrderInterface){
-		const url_api=`${this.url}/api/orders`;
-		return this.http
-		.post<OrderInterface>(url_api, order)
-		.pipe(map(data => data));
-	}
-	saveChat(chat :ChatInterface){
-		const url_api=`${this.url}/api/chats`;
-		return this.http
-		.post<ChatInterface>(url_api, chat)
-		.pipe(map(data => data));
-	}
-	saveMessage(message :MessageInterface){
-		const url_api=`${this.url}/api/messages`;
-		return this.http
-		.post<MessageInterface>(url_api, message)
-		.pipe(map(data => data));
-	}
-
-	deleteSpecialty( id: string){
-		const url_api=`${this.url}/api/branchs/${id}`;
-		return this.http
-		.delete<SpecialtyInterface>(url_api)
-		.pipe(map(data => data));
-	}
-	deleteService(id: string){
-		// let token = this.authService.getToken();
-		const url_api=`${this.url}/api/cards/${id}`;
-		return this.http
-		.delete<ServiceInterface>(url_api)
-		.pipe(map(data => data));
-	}
-	deleteStylist(id: string){
-		const url_api=`${this.url}/api/members/${id}`;
-		return this.http
-		.delete<StylistInterface>(url_api)
-		.pipe(map(data => data));
-	}
 	getProduct(id: string){
-		const url_api = `${this.url}/api/products/${id}`;
+		const url_api = 	this.yeoman.origin.restUrl+`/api/products/${id}`;
+		return this.http.get(url_api);
+	}
+	
+	getAllCategory(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/categories';
+		return this.http.get(url_api);
+	}
+	getAllClient(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/clients';
+		return this.http.get(url_api);
+	}
+	getAllTestimony(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/testimonials';
+		return this.http.get(url_api);
+	}
+	getAllIntegration(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/integrations';
+		return this.http.get(url_api);
+	}
+	getAllRubro(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/rubros';
+		return this.http.get(url_api);
+	}
+	getAllModules(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/modules';
+		return this.http.get(url_api);
+	}
+	getAllServices(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/services';
+		return this.http.get(url_api);
+	}
+	getAllAlbums(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/albums';
+		return this.http.get(url_api);
+	}
+	getAllPackages(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/packages';
 		return this.http.get(url_api);
 	}
 
-	getCierresByBranch(branch: string){
-		const url_api = `${this.url}/api/infos?filter[where][idBranch]=${branch}`;
-		this.cierre = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
+	
 
-	getCardByUserId(userId: string){
-		const url_api = `${this.url}/api/cards?filter[where][userId]=${userId}`;
-		this.cards = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
-	getCustomerByUserId(userId: string){
-		const url_api = `${this.url}/api/customers?filter[where][userd]=${userId}`;
-		// this.customers = this.http.get(url_api);
-		return ( this.http.get(url_api));		
-	}
-	// getSerialT(branch: string){
-	// 	const url_api = `${this.url}/api/branchs/${branch}`;
-	// 	this.branch = this.http.get(url_api);
-	// 	this.yeoman.serialT=this.branch.serialT;
-	// 	return ( this.branch);		
-	// }
-	setSerialT(serial:SerialInterface, branch: string){
+
+	carUpdate(car :CarInterface, id: string){
 		// let token = this.authService.getToken();
-		const url_api = `${this.url}/api/branchs/${branch}`;
+		const url_api=	this.yeoman.origin.restUrl+`/api/cars/${id}`;
 		return this.http
-		.put<SerialInterface>(url_api, serial)
+		.put<CarInterface>(url_api, car)
 		.pipe(map(data => data));
 	}
-
-	saveTicket(ticket :TicketInterface){
-		const url_api=`${this.url}/api/transactions`;
+	partUpdate(part :PartInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/products/${id}`;
 		return this.http
-		.post<TicketInterface>(url_api, ticket)
+		.put<PartInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
-	saveService(service :ServiceInterface){
-		const url_api=`${this.url}/api/cards`;
+	clientUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/clients/${id}`;
 		return this.http
-		.post<ServiceInterface>(url_api, service)
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	testimonyUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/testimonials/${id}`;
+		return this.http
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	integrationUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/integrations/${id}`;
+		return this.http
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	rubroUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/rubros/${id}`;
+		return this.http
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	modulesUpdate(part :ClientInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/modules/${id}`;
+		return this.http
+		.put<ClientInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	servicesUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/services/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	albumsUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/albums/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	packagesUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/packages/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
 	
-	saveSpecialty(specialty :SpecialtyInterface){
-		const url_api=`${this.url}/api/branchs`;
-		return this.http
-		.post<SpecialtyInterface>(url_api, specialty)
-		.pipe(map(data => data));
-	}
-	saveStylist(stylist :StylistInterface){
-		const url_api=`${this.url}/api/members`;
-		return this.http
-		.post<StylistInterface>(url_api, stylist)
-		.pipe(map(data => data));
-	}
+	
 
-	getOrdersByUserId(userd: string){
-		const url_api = `${this.url}/api/orders?filter[where][userd]=${userd}`;
-		return ( this.http.get(url_api));		
+
+	
+	saveProduct(product :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/products';
+		return this.http
+		.post<ProductInterface>(url_api, product)
+		.pipe(map(data => data));
 	}
+	saveCategory(category :CategoryInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/categories';
+		return this.http
+		.post<CategoryInterface>(url_api, category)
+		.pipe(map(data => data));
+	}
+	saveClient(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/clients';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveTestimony(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/testimonials';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveRubro(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/rubros';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveIntegration(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/integrations';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveModules(client :ClientInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/modules';
+		return this.http
+		.post<ClientInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveServices(client :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/services';
+		return this.http
+		.post<ProductInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveAlbums(client :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/albums';
+		return this.http
+		.post<ProductInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	savePackages(client :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/packages';
+		return this.http
+		.post<ProductInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	
 }
