@@ -21,41 +21,7 @@
                                  
                                 </div>
                             </swiper>
-                    <!-- <div class="bethany-slider-item">
-                                <img class="bethany-slider-img" src="assets/assetsEli/images/services/2.jpg" alt="">
-                                    <div class="bethany-slider-caption">
-                                        <div class="bethany-slider-subtitle"><a href="services-page.html">Weddings</a></div>
-                                            <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                    </div>
-                            </div>
-                            <div class="bethany-slider-item">
-                                <img class="bethany-slider-img" src="assets/assetsEli/images/services/3.jpg" alt="">
-                                    <div class="bethany-slider-caption">
-                                        <div class="bethany-slider-subtitle"><a href="services-page.html">Family</a></div>
-                                        <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
-                                    </div>
-                            </div>
-                            <div class="bethany-slider-item">
-                                <img class="bethany-slider-img" src="assets/assetsEli/images/services/4.jpg" alt="">
-                                    <div class="bethany-slider-caption">
-                                        <div class="bethany-slider-subtitle"><a href="services-page.html">Children's</a></div>
-                                        <div class="bethany-slider-title"><a href="services-page.html">...</a></div>
-                                    </div>
-                            </div>
-                            <div class="bethany-slider-item">
-                                <img class="bethany-slider-img" src="assets/assetsEli/images/services/5.jpg" alt="">
-                                    <div class="bethany-slider-caption">
-                                        <div class="bethany-slider-subtitle"><a href="services-page.html">Birthday</a></div>
-                                        <div class="bethany-slider-title"><a href="services-page.html"> ...</a></div>
-                                    </div>
-                            </div>
-                            <div class="bethany-slider-item">
-                                <img class="bethany-slider-img" src="assets/assetsEli/images/services/6.jpg" alt="">
-                                    <div class="bethany-slider-caption">
-                                        <div class="bethany-slider-subtitle"><a href="services-page.html">Pregnant women</a></div>
-                                        <div class="bethany-slider-title"><a href="services-page.html">...</a></div>
-                                    </div>
-                            </div> -->
+                    
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
@@ -152,60 +118,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="setRoute('shop')">
+            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)">
                 <div class="services-item" >
                     <img class="services-img" src="assets/assetsEli/images/services/1.jpg" alt="">
                         <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">{{packages.name}}</a></div>
-                                <div class="services-title"><a href="services-page.html">{{packages.price}}</a></div>
+                            <div class="services-subtitle"><a >{{packages.name}}</a></div>
+                                <div class="services-title"><a >{{packages.price}}</a></div>
                         </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Master of Ceremonies</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/3.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Corporate Events</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/4.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
-                                <div class="services-title"><a href="services-page.html">Destination Wedding</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/5.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Birthday Party Planner</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/6.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Special Events</a></div>
-                        </div>
-                </div> 
-            </div>-->
+           
         </div>
     </div>
 </div>

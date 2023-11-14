@@ -17,6 +17,25 @@ export class Yeoman {
     description: "",
     ref:"",
   };
+  previewPackages:any={
+    images: [
+      {}
+    ],
+    ref:"",
+    name:"",
+    title:"",
+    description:"",
+    placeSession:"",
+    numberPeople:"",
+    clothing:"",
+    numberPhoto:"",
+    price:"",
+    numberSession:"",
+    duration:"",
+    note:"",
+    includes:"",
+    idCategory:"",
+  };
   preview:any={};
   categories:any={};
   allcategory:any=[];

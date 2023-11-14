@@ -10,8 +10,9 @@ import { Yeoman } from '@app/services/yeoman.service';
 export class DetailComponent implements AfterViewInit {
   products:any=[];
   categories:any=[];
-    element:any;
-
+  element:any;
+  previewPackages: boolean = false;
+  previewCategory: any;
   
   constructor(
     private cdr: ChangeDetectorRef,
