@@ -3,22 +3,22 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
+                <div class="signature"><h2>Professional Photography for Every Occasion</h2></div>
                 <div class="signature">Services</div>
             </div>
         </div> 
         <div class="row">
             <div class="col-md-12">
-                        <div class="bethany-slider">
+                        <div class="">
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="view(category)">
                                         <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
                                             <div class="bethany-slider-caption">
                                                 <div class="bethany-slider-subtitle"><a >{{ category.name }}</a></div>
-                                                <div class="bethany-slider-title"><a >....</a></div>
+                                                <h4 >View more</h4>
                                             </div>
                                     </div>
-                                 
                                 </div>
                             </swiper>
                     
@@ -30,85 +30,139 @@
         </div>
     </div>
 </div>
+<!-- introduccion -->
+<div class="section-padding bg-1">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-8 ">
+                <h2>Eli-Photography | professional photography</h2>
+                <hr class="line line-hr-left">
+                <p>In our studio, we transform fleeting moments into timeless memories. Our baby photography encapsulates the innocence and joy of infants, creating timeless images you will treasure forever.</p>
+                <p> For couples in love, we offer engagement and wedding photography, telling their love story with elegance and style. Our photographers masterfully capture every smile, kiss and dance of that special day.
+                   Celebrate birthdays with our photography service, documenting every moment filled with laughter and happiness. From first birthdays to significant celebrations, we capture the joy of these special days.
+                    Committed to excellence, we turn every click of the camera into a work of art, immortalising your most precious moments. Let us be your storytellers, capturing the magic and emotions that make life extraordinary.</p> 
+                <p>Discover our recent photo journeys, from the serenity of Bauen in Switzerland to the vibrant Barcelona in Spain. Every place and moment, captured with passion and artistry.</p> 
+                   
+            </div>
+            <div class="col-md-4 ">
+                <table class="wedding-date-table">
+                    <tbody>
+                        <tr>
+                            <td>
+                                <p>Newborns</p>
+                            </td>
+                            <td>
+                                <p> Maternity </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>Cake smash</p>
+                            </td>
+                            <td>
+                                <p>Quinceañera</p>
+                             </td>
+                        </tr>
+                        <tr>
+                            
+                            <td>
+                                <p> Wedding </p>
+                            </td>
+                            <td>
+                                <p> Graduation 
+                                   
+                            </td>
 
-<!-- About -->
-<div class="section-padding">
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 mb-4">
-            <h2 class="signature">About my</h2>
-            <hr class="line line-hr-left">
-            <h5>Capturing Life's Precious Moments</h5>
-                <p>Photography is the art of freezing moments in time and turning them into everlasting memories. At our studio, we offer a diverse range of photography services that cater to the most special moments in life.</p>
-                <p>For expectant mothers, our maternity photography beautifully captures the glow and anticipation of pregnancy. We create stunning images that celebrate the journey to motherhood, preserving the magic of this unique phase.</p>
-               <!--  <p>When it comes to little ones, our baby photography is a heartwarming experience. We skillfully capture the innocence and joy of infants, creating timeless photos that you'll cherish for a lifetime.</p>
-                <p>For couples in love, we specialize in engagement and wedding photography. Your love story deserves to be told with elegance and style, and we are here to make your dream wedding a visual reality. Our photographers expertly capture the love and joy of this special day, ensuring that every smile, kiss, and dance is preserved forever.</p>
-                <p>Birthdays are a time for celebration, and our birthday photography services are designed to capture the excitement and happiness of your special day. From the first birthday to milestone celebrations, we document every laughter-filled moment.</p>
-                <p>With an unwavering commitment to excellence, we aim to turn every click of the camera into a work of art, etching your life's most precious moments into the annals of time. Let us be your storytellers, capturing the magic and emotions that make life truly extraordinary.</p> -->
-                Whether it's the joy of pregnancy, the sweetness of a newborn, the love of a couple, or the excitement of a birthday, our photography services are here to celebrate and preserve these cherished moments.
-
-        </div>
-        <div class="col-md-5 offset-1">
-            <div class="about-img">
-                <div class="img">
-                    <img src="assets/assetsEli/images/about.jpg" alt="">
-                </div>
-                <div class="about-img-2">Eli</div>
+                        </tr>
+                        <tr>
+                           
+                            <td>
+                                <p> Variety 
+                                    </p>
+                            </td>
+                            <td>
+                                <p> Families 
+                                    </p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
-</div>
-</div>
-<!-- Wedding Dates -->
- <div class="section-padding bg-1">
-<div class="container">
-    <div class="row">
-        <div class="col-md-5 mb-30">
-            <h2>Wedding Dates</h2>
-            <hr class="line line-hr-left">
-            <p>Your at-a-glance guide to where I stand on all the truly important things. Wedding elit miss the eget the solin miss citudino selus rutrum in miss vestibulum eleifen ornare torto.</p>
-        </div>
-        <div class="col-md-6 offset-md-1">
-            <table class="wedding-date-table">
-                <tbody>
-                    <tr>
-                        <td>
-                            <h6>1. SWITZERLAND<br><span>September : 2022</span></h6>
-                        </td>
-                        <td>
-                            <p>Bauen</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h6>2. ITALY<br><span>October : 2022</span></h6>
-                        </td>
-                        <td>
-                            <p>Rome</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h6>3. AMSTERDAM<br><span>November : 2022</span></h6>
-                        </td>
-                        <td>
-                            <p>Netherlands</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <h6>4. SPAIN<br><span>December : 2022</span></h6>
-                        </td>
-                        <td>
-                            <p>Barcelona</p>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+    </div>
+<!-- About -->
+<div class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5 offset-1">
+                <div class="about-img">
+                    <div class="img">
+                        <img src="assets/assetsEli/images/about.jpg" alt="">
+                    </div>
+                    <div class="about-img-2">Eli Quintalla</div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <h2 class="signature">About my</h2>
+                <hr class="line line-hr-left">
+                <div class="signature">Capturing Life's Precious Moments</div>
+                <p></p>
+                <p>My camera is an extension of my vision to discover and celebrate joy, love and togetherness, making each image tell a unique and personal story.
+                    Let me be a part of your most precious moments, capturing them for you to treasure forever.
+                </p>
+                <p>I am of Salvadorian origin and fluent in English and Spanish, my multicultural perspective enriches my photography. Married and a mother of three, with three grandchildren, I understand the importance of every moment in life. 
+                    With my camera, I capture with love and authenticity from the sweetness of a newborn to the joy of a birthday, preserving your most precious memories. Let me tell your story through my images.</p>
+                <div class="cont">
+                     <a class="more" data-splitting style="color: #a2783a;"><span>Read More</span></a>
+                </div>      
+            </div>
+            
         </div>
     </div>
 </div>
-</div> 
+<!-- productos -->
+<div class="testimonials">
+    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/2.jpg"> </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>Products</h2>
+                    <hr class="line line-hr-center">
+                    <span>Discover these and more products that we have specially for you</span>
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testim">
+                        <swiper [config]="config2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide box" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)">
+                                    <div class="item">
+                                        <div class="cont">
+                                            <div class="img"> <img src="{{packages.images[0]}}" alt=""> </div>
+                                            <div class="info">
+                                                <h5>{{packages.name}}</h5>  
+                                                <span>Bern, 2022</span> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper>
+                        
+                    </div>
+                   
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+           
+        </div>
+</div>
+<!-- Paquetes -->
 <div class="section-padding">
     <div class="container">
         <div class="row">
@@ -131,7 +185,8 @@
         </div>
     </div>
 </div>
-<div class="section-padding">
+<!-- Productos -->
+<!-- <div class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -141,8 +196,7 @@
         </div>
         <div class="row">
             <div class="col-md-4" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('shop')" [hidden]="i > 5">
-<!--                 <div class="col-md-4" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('shop')" [hidden]="i >= 5">
- -->                <div class="services-item" >
+                <div class="services-item" >
                     <img class="services-img" src="{{products.images[0]}}" alt="">
                         <div class="services-caption">
                             <div class="services-subtitle"><a href="services-page.html">{{products.name}}</a></div>
@@ -150,55 +204,12 @@
                         </div>
                 </div>
             </div>
-            <!-- <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Master of Ceremonies</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/3.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Corporate Events</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/4.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
-                                <div class="services-title"><a href="services-page.html">Destination Wedding</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/5.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Birthday Party Planner</a></div>
-                        </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/6.jpg" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
-                                <div class="services-title"><a href="services-page.html">Special Events</a></div>
-                        </div>
-                </div> 
-            </div>-->
+         
         </div>
     </div>
-</div>
-<div class="section-padding" style="padding: 20px 0;">
+</div> -->
+<!-- galery -->
+<!-- <div class="section-padding" style="padding: 20px 0;">
 <div class="container">
     <div class="row">
         <div class="col-md-12 text-center">
@@ -258,190 +269,77 @@
      
     </div>
 </div>
-</div>
-
-<div class="section-padding bg-1">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2>Video Gallery</h2>
-            <hr class="line line-hr-center">
-        </div>
-    </div>
-    <div class="row">
-        <!-- 2 columns -->
-        <div class="col-md-6">
-            <div class="vid-area mb-30">
-                <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/10.jpg" alt="">
-                    <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                        <span class="video-gallery-polygon">
-                            <i class="ti-control-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="vid-area mb-30">
-                <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
-                    <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                        <span class="video-gallery-polygon">
-                            <i class="ti-control-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <!-- 3 columns -->
-        <div class="col-md-4">
-            <div class="vid-area mb-30">
-                <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/12.jpg" alt="">
-                    <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                        <span class="video-gallery-polygon">
-                            <i class="ti-control-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="vid-area mb-30">
-                <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/13.jpg" alt="">
-                    <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                        <span class="video-gallery-polygon">
-                            <i class="ti-control-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-4">
-            <div class="vid-area mb-30">
-                <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/14.jpg" alt="">
-                    <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                        <span class="video-gallery-polygon">
-                            <i class="ti-control-play"></i>
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- Testimonials -->
-<div class="testimonials section-padding bg-1">
-<div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/2.jpg"> </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12 text-center">
-            <h2>Clients</h2>
-            <hr class="line line-hr-center">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="testim">
-                <div class="box">
-                    <div class="item">
-                        <div class="cont">
-                            <div class="img"> <img src="assets/assetsEli/images/team/05.jpg" alt=""> </div>
-                            <div class="info">
-                                <h5>Eloise & Michael</h5> <span>Bern, 2022</span>
-                            </div>
-                        </div>
-                        <p>Quality eu nunc bibe endum in finibus elit miss eget the solin miss citudin elit. Phasellus rutrum in lacus ut miss. Lestibulum tortor semper the drana. Wedding fusce ornare ut tortor hendreri.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="item">
-                        <div class="cont">
-                            <div class="img"> <img src="assets/assetsEli/images/team/06.jpg" alt=""> </div>
-                            <div class="info">
-                                <h5>Katie & Frank</h5> <span>London, 2022</span>
-                            </div>
-                        </div>
-                        <p>Wedding eu nunc bibe endum in finibus elit miss eget the solin miss citudin elit. Phasellus rutrum in lacus ut miss. Lestibulum tortor semper the drana. Wedding fusce ornare ut tortor hendreri.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="item">
-                        <div class="cont">
-                            <div class="img"> <img src="assets/assetsEli/images/team/07.jpg" alt=""> </div>
-                            <div class="info">
-                                <h5>Alisea & James</h5> <span>France, 2022</span>
-                            </div>
-                        </div>
-                        <p>Event eu nunc bibe endum in finibus elit miss eget the solin miss citudin elit. Phasellus rutrum in lacus ut miss. Lestibulum tortor semper the drana. Wedding fusce ornare ut tortor hendreri.</p>
-                    </div>
-                </div>
-                <div class="box">
-                    <div class="item">
-                        <div class="cont">
-                            <div class="img"> <img src="assets/assetsEli/images/team/08.jpg" alt=""> </div>
-                            <div class="info">
-                                <h5>Latoya & James</h5> <span>Roma, 2022</span>
-                            </div>
-                        </div>
-                        <p>Ceremony eu nunc bibe endum in finibus elit miss eget the solin miss citudin elit. Phasellus rutrum in lacus ut miss. Lestibulum tortor semper the drana. Wedding fusce ornare ut tortor hendreri.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-<!-- News & Blog -->
-<!--   <div class="blog section-padding">
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <h2>Latest News</h2>
-            <hr class="line line-hr-left">
-        </div>
-    </div>
-    <div class="row mb-5">
-        <div class="col-md-6">
-            <div class="img left"><a href="post.html"><img src="assets/assetsEli/images/blog/a.jpg" alt=""></a></div>
-        </div>
-        <div class="col-md-6 valign">
-            <div class="content">
-                <div class="date">
-                    <h3>03</h3>
-                    <h6>Dec 2022</h6>
-                </div>
-                <div class="cont">
-                    <div class="info">
-                        <h6><a href="blog.html">by Bethany</a> / <a href="blog.html" class="tags">Wedding</a></h6>
-                    </div>
-                    <h4>My Favourite Special Bridesmaid Gifts</h4> <a href="post.html" class="more" data-splitting><span>Read More</span></a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 order2 valign">
-            <div class="content">
-                <div class="date">
-                    <h3>05</h3>
-                    <h6>Dec 2022</h6>
-                </div>
-                <div class="cont">
-                    <div class="info">
-                        <h6><a href="blog.html">bethany</a> / <a href="blog.html" class="tags">Wedding</a></h6>
-                    </div>
-                    <h4>Why would anyone hire a wedding planner?</h4>
-                    <a href="post.html" class="more" data-splitting><span>Read More</span></a>
-                </div>
-            </div>
-        </div>
-        <div class="col-lg-6 order1">
-            <div class="img"><a href="post.html"><img src="assets/assetsEli/images/blog/b.jpg" alt=""></a></div>
-        </div>
-    </div>
-</div>
 </div> -->
 
+<div class="section-padding bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2>Albums</h2>
+                <hr class="line line-hr-center">
+            </div>
+        </div>
+        <div class="row">
+            <!-- 2 columns -->
+            <div class="col-md-6">
+                <div class="vid-area mb-30">
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/10.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="vid-area mb-30">
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 3 columns -->
+            <div class="col-md-4">
+                <div class="vid-area mb-30">
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/12.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="vid-area mb-30">
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/13.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="vid-area mb-30">
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/14.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 <!-- Clients -->
 <!-- <div class="clients">
 <div class="container">
@@ -470,6 +368,4 @@
     </div>
 </div>
 </div> -->
-<!-- Footer -->
 
-<!-- toTop -->

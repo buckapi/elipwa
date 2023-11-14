@@ -8,3 +8,11 @@
     color: #505050;
     padding-bottom: 2%;
 }
+.testimonials .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+}
