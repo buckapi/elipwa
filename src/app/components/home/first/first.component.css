@@ -1,13 +1,4 @@
-.bethany-homepage-slider .signature {
-    font-family: 'Signatie';
-    font-size: 35px;
-    font-weight: normal;
-    font-style: normal;
-   /*  margin-top: -19px; */
-    text-align: center;
-    color: #505050;
-    padding-bottom: 2%;
-}
+
 .testimonials .background {
     position: absolute;
     top: 0;
@@ -19,6 +10,10 @@
 .signature1 {
     font-family: Signatie;
     color: darkgoldenrod;
+}
+.signature2{
+    font-family: Signatie;
+
 }
 .bg-1 {
     background: #d9ffff;
