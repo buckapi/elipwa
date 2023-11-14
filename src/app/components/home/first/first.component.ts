@@ -59,6 +59,10 @@ export class FirstComponent implements AfterViewInit {
       this.allProducts=response;
     });
   }
+  view(category:any){
+    this.yeoman.previewCategory=category;
+    this.setRoute('detail');
+  }
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;

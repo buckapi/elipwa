@@ -11,11 +11,11 @@
                         <div class="bethany-slider">
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="setRoute('shop')">
+                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="view(category)">
                                         <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
                                             <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a href="services-page.html">{{ category.name }}</a></div>
-                                                <div class="bethany-slider-title"><a href="services-page.html">....</a></div>
+                                                <div class="bethany-slider-subtitle"><a >{{ category.name }}</a></div>
+                                                <div class="bethany-slider-title"><a >....</a></div>
                                             </div>
                                     </div>
                                  

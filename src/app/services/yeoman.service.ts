@@ -8,13 +8,22 @@ export class Yeoman {
   virtualRoute:string="first";
   categorySelected:string="first";
   products:any=[];
+   previewCategory:any={
+    images: [
+      {}
+    ],
+    name: "",
+    subname: "",
+    description: "",
+    ref:"",
+  };
   preview:any={};
   categories:any={};
   allcategory:any=[];
   allCategoriesSize:number=0;
   cart:any;
   car:any[]=[];
-
+  
   ticket:any[]=[];
   currency:number=1;
   init:number=1;

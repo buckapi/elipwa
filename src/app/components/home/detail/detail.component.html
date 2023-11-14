@@ -1,199 +1,62 @@
-<section>
-    <div class="w-100 pt-170 pb-150 dark-layer3  position-relative">
-        <div class="fixed-bg" style="background-image: url(assets/aceros/images/pagetop-bg.jpg);"></div>
-        <div class="container">
-            <div class="page-top-wrap w-100">
-                <h1 class="mb-0">Detalles de productos</h1>
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a (click)="setRoute('first')" title="" style="cursor:pointer;">Inicio</a></li>
-                    <li class="breadcrumb-item"><a (click)="setRoute('shop')" title="" style="cursor:pointer;">Catalogo</a></li>
-                    <li class="breadcrumb-item active">Detalles</li>
-                </ol>
-            </div><!-- Page Top Wrap -->
+<div class="bethany-services-section mb-60">
+    <div class="container" *ngIf="yeoman.previewCategory!==undefined">
+        <div class="row">
+            <div class="col-md-12 mb-30" > 
+                <img src="{{yeoman.previewCategory.images[0]}}" alt=""> </div>
         </div>
-    </div>
-</section>
-<section>
-    <div class="w-100 pt-100 pb-100 position-relative" *ngIf="yeoman.preview.images!==undefined">
-        <div class="container">
-            <div class="shop-detail-wrap w-100">
-                <div class="shop-detail-inner w-100">
-                    <div class="row">
-                        <div class="col-md-6 col-sm-6 col-lg-7">
-                            <div class="">
-                                <div class="">
-                                    <div   >
-                                        <a  title="">
-                                            <img src="{{yeoman.preview.images[0]}}" alt="aceros detalle">
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- <div class="shop-detail-nav-caro mb-0 list-unstyled">
-                                    <div><img class="img-fluid" src="assets/aceros/images/resources/shop-detail-nav-img1-1.jpg" alt="Shop Detail Nav Image 1"></div>
-                                    <div><img class="img-fluid" src="assets/aceros/images/resources/shop-detail-nav-img1-2.jpg" alt="Shop Detail Nav Image 2"></div>
-                                    <div><img class="img-fluid" src="assets/aceros/images/resources/shop-detail-nav-img1-3.jpg" alt="Shop Detail Nav Image 3"></div>
-                                    <div><img class="img-fluid" src="assets/aceros/images/resources/shop-detail-nav-img1-4.jpg" alt="Shop Detail Nav Image 4"></div>
-                                    <div><img class="img-fluid" src="assets/aceros/images/resources/shop-detail-nav-img1-5.jpg" alt="Shop Detail Nav Image 5"></div>
-                                </div> -->
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-6 col-lg-5">
-                            <div class="shop-detail-info w-100" >
-                                <h2 class="mb-0">{{yeoman.preview.name}}</h2>
-                                <span class="rate d-inline-block"><i class="far fa-star on"></i><i class="far fa-star off"></i><i class="far fa-star off"></i><i class="far fa-star off"></i><i class="far fa-star off"></i></span>
-                                <!-- <div class="review-link">
-                                    <span class="d-inline-block">Interested: 05</span>
-                                    <a href="javascript:void(0);" title="">564 Reviews(S)</a>
-                                </div> -->
-                                <div class="price-stock d-flex flex-wrap justify-content-between align-items-center w-100">
-                                    <span class="price"><ins>${{yeoman.preview.price}}</ins></span>
-                                    <!-- <span class="stock">Categoria:<span>{{yeoman.preview.category}}</span> <i></i></span> -->
-                                </div>
-                                <p class="mb-0">{{yeoman.preview.description}}</p>
-                                <p class="mb-0">Dimensiones: {{yeoman.preview.dimensiones}}</p>
-                                <p class="mb-0">Calibre: {{yeoman.preview.calibre}}</p>
-                               
-                               
-                                <div class=" quantity d-flex align-items-center mb-20">
-                                       <div class="quantity__box">
-                                            <button type="button" class="quantity__value quickview__value--quantity decrease" aria-label="quantity value" value="Decrease Value"  (click)="minus()">-</button>
-                                            <label>
-                                                <input type="number" class="quantity__number quickview__value--number" [(ngModel)]="quantity"   [ngModelOptions]="{standalone: true}"/>
-                                            </label>
-                                            <button type="button" class="quantity__value quickview__value--quantity increase" aria-label="quantity value" value="Increase Value" (click)="plus()">+</button>
-                                        </div>
-                                    <button class="orange-button" (click)="addToBag(quantity)">  Agregar al carro<i class="fas fa-shopping-basket"></i> </button>
-                                </div>
-                             
-                            </div>
-                        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h3>{{yeoman.previewCategory.name}}</h3>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <p>Description</p>
+                <br>
+            </div>
+            <div class="col-md-12">
+                <h5>Package Includes</h5>
+                <p><b>1.</b> Items</p>
+                <p><b>2.</b> Items</p>
+                <p><b>3.</b> Items</p>
+                <p><b>4.</b> Items</p>
+                <p><b>5.</b> Items</p>
+                <p><b>6.</b> Items</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/a.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/a.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
-                </div>
-                <div class="shop-detail-tabs mt-50 w-100">
-                    <ul class="nav nav-tabs">
-                       <!-- <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#shop-detail1">Descripción</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="shop-detail.html#shop-detail2">Comments</a></li>
-                        <li class="nav-item"><a class="nav-link" data-toggle="tab" href="shop-detail.html#shop-detail3">Review</a></li> -->
-                    </ul>
-                    <!--  <div class="tab-content">
-                        <div class="tab-pane fade show active" id="shop-detail1">
-                            <p class="mb-0">MOVIE STAR – Online Movie,Video & TV Show PSD Template is a the best design for 2017. any kinds of online video Template Based on Bootstrap, 12 column Responsive grid Template. “MOVIE STAR” is a smooth and colorful online video PSD Template, perfect suitable for , Businesses or Personal One page Template. It includes everything you need for the website development such as online Movie,Video & TV Show Template .PSD files are well organized also you can customize very easy . we have include 21 psd file for you. Please, don’t forget to leave a stars rating for this Template!</p>
-                            <p class="mb-0">MOVIE STAR – Online Movie,Video & TV Show PSD Template is a the best design for 2017. any kinds of online video Template Based on Bootstrap, 12 column Responsive grid Template. “MOVIE STAR” is a smooth and colorful online video PSD Template, perfect suitable for , Businesses or Personal One page Template. It includes everything you need for the website development such as online Movie,Video & TV Show Template.</p>
-                            <h4 class="mb-0">Item Features:</h4>
-                            <ul class="mb-0 list-unstyled">
-                                <li>Perfect unique design</li>
-                                <li>Fully responsive</li>
-                                <li>Amazing parallax effects</li>
-                                <li>SEO friendly</li>
-                                <li>Well organized and valid code</li>
-                                <li>Google fonts</li>
-                                <li>WPML ready</li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="shop-detail2">
-                            <ul class="comments-thread mb-0 list-unstyled">
-                                <li>
-                                    <div class="comment w-100">
-                                        <div class="comment-img"><span class="rounded-circle"><img class="img-fluid rounded-circle" src="assets/aceros/images/resources/comment-img1.png" alt="Comment Image 1"></span></div>
-                                        <div class="comment-detail">
-                                            <h4 class="mb-0">Kosmi Kotalia</h4>
-                                            <span class="rate d-inline-block text-color3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>
-                                            <p class="mb-0">There are many variations of passages of Lorem Ipsum available, but the majority some form, by injected humour, or randomised words which.</p>
-                                            <a class="comment-reply-link d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-reply-all"></i>Reply</a>
-                                            <span class="d-inline-block"><i class="far fa-clock"></i>39 minutes ago</span>
-                                        </div>
-                                    </div>
-                                    <ul class="children mb-0 list-unstyled">
-                                        <li>
-                                            <div class="comment w-100">
-                                                <div class="comment-img"><span class="rounded-circle"><img class="img-fluid rounded-circle" src="assets/aceros/images/resources/comment-img2.png" alt="Comment Image 2"></span></div>
-                                                <div class="comment-detail">
-                                                    <h4 class="mb-0">Envato Market</h4>
-                                                    <span class="rate d-inline-block text-color3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i></span>
-                                                    <p class="mb-0">There are many variations of passages of Lorem Ipsum available, but some form, by injected humour, or randomised words.</p>
-                                                    <a class="comment-reply-link d-inline-block" href="javascript:void(0);" title=""><i class="fas fa-reply-all"></i>Reply</a>
-                                                    <span class="d-inline-block"><i class="far fa-clock"></i>39 minutes ago</span>
-                                                </div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-pane fade" id="shop-detail3">
-                            <div class="reply-form mt-5 w-100">
-                                <h3 class="mb-0">Add Your Review</h3>
-                                <form class="w-100">
-                                    <div class="row">
-                                        <div class="col-md-12 col-sm-12 col-lg-12">
-                                            <span class="rate d-inline-block text-color3"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-wrap w-100">
-                                                <label>Your name:</label>
-                                                <input type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-sm-6 col-lg-6">
-                                            <div class="field-wrap w-100">
-                                                <label>Email Address:</label>
-                                                <input type="email">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12 col-sm-12 col-lg-12">
-                                            <div class="field-wrap w-100">
-                                                <label>Write a message:</label>
-                                                <textarea></textarea>
-                                            </div>
-                                            <button class="thm-btn thm-bg" type="submit">Leave Review<i class="flaticon-arrow-pointing-to-right"></i></button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div> -->
-                </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/b.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/b.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/c.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/c.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/d.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/d.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>
-</section>
-<!-- <section>
-    <div class="w-100 pb-50 position-relative">
-        <div class="container">
-            <div class="clients-wrap w-100">
-                <div class="row">
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-1.png" alt="Client Image 1"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-2.png" alt="Client Image 2"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-3.png" alt="Client Image 3"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-4.png" alt="Client Image 4"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-5.png" alt="Client Image 5"></a>
-                        </div>
-                    </div>
-                    <div class="col-md-3 col-sm-4 col-lg-2">
-                        <div class="client-box w-100">
-                            <a href="javascript:void(0);" title=""><img class="img-fluid" src="assets/aceros/images/resources/client-img1-6.png" alt="Client Image 6"></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
+</div>
