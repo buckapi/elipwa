@@ -16,3 +16,16 @@
     width: 100%;
     z-index: -1;
 }
+.signature1 {
+    font-family: Signatie;
+    color: darkgoldenrod;
+}
+.bg-1 {
+    background: #d9ffff;
+}
+.about{
+background: #f5f0ec;
+}
+.packages{
+    background: #f5f0ec;
+}
