@@ -1,30 +1,22 @@
-<div class="bethany-services-section mb-60" >
+<div class="bethany-services-section mb-60 bg-1" >
     <div class="container" *ngIf="yeoman.previewCategory!==undefined" [hidden]="previewPackages">
         <div class="row">
-            <div class="col-md-12 mb-30" > 
-                <img src="{{yeoman.previewCategory.images[0]}}" alt=""> </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 mb-30" > 
+                <img src="{{yeoman.previewCategory.images[0]}}" alt=""> 
+            </div>
+            <div class="col-md-6">
                 <h3>{{yeoman.previewCategory.name}}</h3>
+                <hr class="line line-hr-left">
+                <h4 class="signature1">{{yeoman.previewCategory.subname}}</h4>
+                <p><strong>{{yeoman.previewCategory.description1}}</strong></p>
+                <p>{{yeoman.previewCategory.description2}}</p>
+                <p><strong>{{yeoman.previewCategory.description3}}</strong></p>
             </div>
+           
         </div>
-<!--         <div class="row mb-5">
-            <div class="col-md-12">
-                <p>Description</p>
-                <br>
-            </div>
-            <div class="col-md-12">
-                <h5>Package Includes</h5>
-                <p><b>1.</b> Items</p>
-                <p><b>2.</b> Items</p>
-                <p><b>3.</b> Items</p>
-                <p><b>4.</b> Items</p>
-                <p><b>5.</b> Items</p>
-                <p><b>6.</b> Items</p>
-            </div>
-        </div>
-        <div class="row">
+       
+      
+        <!-- <div class="row">
             <div class="col-md-6 gallery-item">
                 <a href="assets/assetsEli/images/blog/a.jpg" title="" class="img-zoom">
                     <div class="gallery-box">
@@ -57,7 +49,7 @@
                     </div>
                 </a>
             </div>
-        </div> -->
+        </div>  -->
     </div>
 </div>
 <div class="bethany-services-section mb-60">

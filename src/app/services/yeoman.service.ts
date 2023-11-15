@@ -14,7 +14,9 @@ export class Yeoman {
     ],
     name: "",
     subname: "",
-    description: "",
+    description1: "",
+    description2: "",
+    description3: "",
     ref:"",
   };
   previewPackages:any={
