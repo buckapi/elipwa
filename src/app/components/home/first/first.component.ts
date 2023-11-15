@@ -2,6 +2,7 @@ import { Component, AfterViewInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
 import { SwiperOptions } from 'swiper';
 import { RestService } from '@app/services/rest.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
@@ -60,7 +61,8 @@ export class FirstComponent implements AfterViewInit {
   };
   constructor(
     public yeoman:Yeoman,
-    public restService:RestService
+    public restService:RestService,
+    public router: Router
   ) 
   {
     this.loadCategories();
@@ -90,11 +92,16 @@ export class FirstComponent implements AfterViewInit {
     this.yeoman.previewPackages=packages;
     this.setRoute('detail');
   }
+  viewProducts(products:any){
+    this.yeoman.previewProducts=products;
+    this.setRoute('detail-products');
+  }
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
   }
   ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
   }
 
 }

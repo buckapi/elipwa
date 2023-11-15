@@ -10,10 +10,10 @@ import { ShopComponent } from './shop/shop.component';
 import { DetailComponent } from './detail/detail.component';
 import { AboutComponent } from './about/about.component';
 import { CategoriesComponent } from './categories/categories.component';
-import { CarsComponent } from './cars/cars.component';
-import { CheckoutComponent } from './checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import { ProductsComponent } from './products/products.component';
+import { DetailProductsComponent } from './detail-products/detail-products.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -23,8 +23,8 @@ import { FormsModule } from '@angular/forms';
     DetailComponent,
     AboutComponent,
     CategoriesComponent,
-    CarsComponent,
-    CheckoutComponent
+    ProductsComponent,
+    DetailProductsComponent
   ],
   imports: [
     FormsModule,

@@ -437,7 +437,7 @@ display: block;
     outline: none;
 }
 .navbar-light .navbar-toggler:hover {
-    background: transparent;
+    background: #00000036;
 }
 .navbar-light .navbar-toggler-icon {
     width: 24px;
@@ -1731,11 +1731,11 @@ width: 100px;
     padding: 100px 0 0;
 }
 .main-footer.dark {
-    background: #a2783a;
-    color: #fff;
+    background: #f5f0ec;
+    color: #000;
 }
 .main-footer .abot p {
-    color: #fff;
+    color: #000;
 }
 
 .main-footer .abot .logo img {
@@ -1751,10 +1751,10 @@ width: 100px;
 .main-footer .abot .social-icon a {
     font-size: 15px;
     margin-right: 10px;
-    color: #fff;
+    color: #000;
 }
 .main-footer .abot .social-icon a:hover {
-    color: #fff;
+    color: #000;
 }
 .main-footer .usful-links ul {
     margin: 0;
@@ -1768,14 +1768,14 @@ width: 100px;
 }
 .main-footer .usful-links ul li i {
     font-size: 7px;
-    color: #fff;
+    color: #000;
     margin-right: 3px;
 }
 .main-footer .usful-links ul li a {
-    color: #fff;
+    color: #000;
 }
 .main-footer .fothead h6 {
-    color: #fff;
+    color: #000;
     font-size: 20px;
 }
 .main-footer .fotcont .fothead h6 {
@@ -1793,7 +1793,7 @@ width: 100px;
 }
 .main-footer .fotcont p {
     margin-bottom: 0px;
-    color: #fff;
+    color: #000;
 }
 .main-footer .sub-footer {
     padding: 30px 0;
@@ -1802,24 +1802,24 @@ width: 100px;
 }
 .main-footer .sub-footer p {
     font-size: 14px;
-    color: #fff;
+    color: #000;
     margin-bottom: 0;
 }
 .main-footer .sub-footer p a {
-   color: #fff;
+   color: #000;
 }
 .main-footer .logo h2 {
     font-family: Signatie;
     font-weight: normal;
     font-size: 30px;
-    color: #fff;
+    color: #000;
     line-height: 1.25em;
     margin-bottom: 20px;
     letter-spacing: 1px;
 }
 .main-footer .logo span {
     display: block;
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
     letter-spacing: 3px;
     font-size: 9px;

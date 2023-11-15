@@ -1,0 +1,20 @@
+
+.signature1 {
+    font-family: Signatie;
+    color: darkgoldenrod;
+}
+.signature2{
+    font-family: Signatie;
+
+}
+.p{
+    text-align: justify;
+}
+.section-padding{
+    background-color: #d9ffff;
+}
+.social-icon{
+    color:darkgoldenrod ;
+}
+a {
+    color: darkgoldenrod;}

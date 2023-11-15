@@ -1,4 +1,4 @@
-<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="1" data-background="assets/assetsEli/images/banner/2.jpg">
+<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="1" data-background="assets/assetsEli/images/banner/family.jpg">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -12,21 +12,24 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Our Services</h2>
+                <h2 class="signature1" style="color: darkgoldenrod;">Our Services</h2>
                 <hr class="line line-hr-center">
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="services-item">
-                    <img class="services-img" src="assets/assetsEli/images/services/1.jpg" alt="">
+            <div class="col-md-4" *ngFor="let category of categories; let i = index" (click)="view(category)">
+                <div class="services-item" >
+                    <img class="services-img" src="{{category.images[0]}}" alt="">
                         <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
-                                <div class="services-title"><a href="services-page.html">Wedding Planner</a></div>
+                            <div class="services-subtitle" ><a (click)="view(category)">{{ category.name }}</a></div>
+
+                                <div class="services-title"><a (click)="view(category)">View more</a></div>
                         </div>
                 </div>
+                <div class="services-subtitle" style="text-align: center;" ><a (click)="view(category)">{{ category.name }}</a></div>
+
             </div>
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
                 <div class="services-item">
                     <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
                         <div class="services-caption">
@@ -70,107 +73,52 @@
                                 <div class="services-title"><a href="services-page.html">Special Events</a></div>
                         </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
 <!-- Pricing -->
-<div class="price-section price section-padding bg-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Pricing Plan</h2>
-                <hr class="line line-hr-center">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 owl-carousel owl-theme">
-                <div class="item">
-                    <div class="cont">
-                        <div class="type">
-                            <h6>Ceremony</h6>
-                        </div>
-                        <div class="value">
-                            <h4>2500<span>$</span></h4>
-                            <p>Starting From</p>
-                        </div>
-                        <div class="feat">
-                            <ul>
-                                <li>Decoration</li>
-                                <li>DJ & Sound</li>
-                                <li><del>Photographer</del></li>
-                                <li>Celebrant</li>
-                            </ul>
-                        </div>
-                        <button class="bethany-btn2" type="submit">Details</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cont">
-                        <div class="type">
-                            <h6>Party</h6>
-                        </div>
-                        <div class="value">
-                            <h4>3500<span>$</span></h4>
-                            <p>Starting From</p>
-                        </div>
-                        <div class="feat">
-                            <ul>
-                                <li>Decoration</li>
-                                <li>DJ & Sound</li>
-                                <li>Photographer</li>
-                                <li>Party Planner</li>
-                            </ul>
-                        </div>
-                        <button class="bethany-btn2" type="submit">Details</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cont">
-                        <div class="type">
-                            <h6>Full Wedding</h6>
-                        </div>
-                        <div class="value">
-                            <h4>6500<span>$</span></h4>
-                            <p>Starting From</p>
-                        </div>
-                        <div class="feat">
-                            <ul>
-                                <li>Decoration</li>
-                                <li>DJ & Sound</li>
-                                <li>Photographer</li>
-                                <li>Make-Up & Hair Dresser</li>
-                            </ul>
-                        </div>
-                        <button class="bethany-btn2" type="submit">Details</button>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="cont">
-                        <div class="type">
-                            <h6>Pre - Wedding</h6>
-                        </div>
-                        <div class="value">
-                            <h4>5500<span>$</span></h4>
-                            <p>Starting From</p>
-                        </div>
-                        <div class="feat">
-                            <ul>
-                                <li>Decoration</li>
-                                <li>DJ & Sound</li>
-                                <li>Photographer</li>
-                                <li>Venue Booking</li>
-                            </ul>
-                        </div>
-                        <button class="bethany-btn2" type="submit">Details</button>
-                    </div>
+<!-- <div class="testimonials">
+    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/bebe.jpg"> </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 class="signature1">Packages</h2>
+                    <hr class="line line-hr-center">
+                    <span style=" color: #f5f0ec;">Discover these and more packages that we have especially for you!</span>
+                    
                 </div>
             </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="testim">
+                        <swiper [config]="config2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide box" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" style="cursor: pointer;">
+                                    <div class="item">
+                                        <div class="cont">
+                                            <div class="img"> <img src="{{packages.images[0]}}" alt=""> </div>
+                                            <div class="info">
+                                                <h5>{{packages.name}}</h5>  
+                                                <span>See now</span> 
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </swiper>
+                        
+                    </div>
+                   
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+           
         </div>
-    </div>
-</div>
+</div> -->
 <!-- F.A.Qs -->
-<div class="section-padding">
+<!-- <div class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -233,4 +181,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+

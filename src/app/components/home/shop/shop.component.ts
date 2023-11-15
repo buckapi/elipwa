@@ -1,8 +1,7 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
 import { RestService } from '@app/services/rest.service';
-
-import { Category } from '@app/interfaces/category';
+import { SwiperOptions } from 'swiper';
 
 @Component({
   selector: 'app-shop',
@@ -13,8 +12,33 @@ export class ShopComponent implements AfterViewInit {
 products:any=[];
 categories:any;
 category:any;
+allProducts:any;
+allPackages:any;
 //showCategoryDropdown: boolean = false;
 //selectedCategory: any=[];
+config2: SwiperOptions = {
+  a11y: { enabled: true },
+  direction: 'horizontal',
+  slidesPerView: 2,
+  keyboard: true,
+  mousewheel: false,
+  scrollbar: false,
+  pagination: true,
+  spaceBetween: 3,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  autoplay: {
+    delay: 2000, 
+    disableOnInteraction: false, 
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 4
+    }
+  }
+};
   constructor(
     public restService:RestService,
     public yeoman:Yeoman
@@ -22,10 +46,10 @@ category:any;
    
   { 
    this.loadCategories();
-
+   this.getAllPackages();
 }
 
-setCategory(category: any) {
+/* setCategory(category: any) {
   let id = category.idCategory;
   // console.log("category recibida: "+id)
   for (let i = 0; i < this.categories.length; i++) {
@@ -37,35 +61,38 @@ setCategory(category: any) {
       break; // Terminamos el bucle ya que hemos encontrado el objeto
     }
   }
-}
+} */
   setRoute(par:any){
     let parametro=par;
     this.yeoman.virtualRoute=parametro;
   }
   view(id:any){
     this.yeoman.preview=this.yeoman.products[id];
-  //  let preview=this.yeoman.products[id];
-    // console.log("id: "+id+"preview name: ");
-    // console.log(JSON.stringify(preview));
     this.setRoute('detail');
   }
 
-// getProducts(){
-//   this.restService.getAllProducts().subscribe(response=>{
-//     this.products=[];
-//     this.products=response;
-//     this.yeoman.products=this.products;
-//   });
 
-// }
 loadCategories(){
   this.restService.getAllCategory().subscribe(response=>{
     this.categories=response;
   });
 }
+getAllPackages(){
+  this.restService.getAllPackages().subscribe(response=>{
+    this.allPackages=response;
+  });
+}
+viewPackages(packages:any){
+  this.yeoman.previewPackages=packages;
+  this.setRoute('detail');
+}
+ngOnInit(): void {
+  window.scrollTo(0, 0);
+}
 
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }
+ 
 
 }

@@ -12,11 +12,11 @@
                         <div class="">
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="view(category)">
+                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="view(category)" style="cursor: pointer;">
                                         <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
                                             <div class="bethany-slider-caption">
-                                                <div class="bethany-slider-subtitle"><a >{{ category.name }}</a></div>
-                                                <h4 >View more</h4>
+                                                <div class="bethany-slider-subtitle"><a style="cursor: pointer;">{{ category.name }}</a></div>
+                                                <h4 style="cursor: pointer;">View more</h4>
                                             </div>
                                     </div>
                                 </div>
@@ -142,6 +142,8 @@
                         My camera is an extension of my vision to discover and celebrate joy, love and togetherness, making each image tell a unique and personal story. Let me be a part of your most precious moments, capturing them for you to treasure forever.
                         
                         I am of Salvadorian origin and fluent in English and Spanish, my multicultural perspective enriches my photography. Married and a mother of three, with three grandchildren, I understand the importance of every moment in life. With my camera, I capture with love and authenticity from the sweetness of a newborn to the joy of a birthday, preserving your most precious memories. Let me tell your story through my images.
+                    </p>
+                    <a (click)="setRoute('about')" style="color: black; cursor: pointer;">Lear more</a>
 
             </div>
             
@@ -150,13 +152,13 @@
 </div>
 <!-- productos -->
 <div class="testimonials">
-    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/2.jpg"> </div>
+    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/adolecente.jpg"> </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2 class="signature1">Products</h2>
+                    <h2 class="signature2">Products</h2>
                     <hr class="line line-hr-center">
-                    <span>Discover these and more products that we have specially for you</span>
+                    <span class="signature2">Discover these and more products that we have specially for you</span>
                     
                 </div>
             </div>
@@ -165,13 +167,13 @@
                     <div class="testim">
                         <swiper [config]="config2">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide box" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)">
+                                <div class="swiper-slide box" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('products')">
                                     <div class="item">
                                         <div class="cont">
-                                            <div class="img"> <img src="{{packages.images[0]}}" alt=""> </div>
+                                            <div class="img"> <img src="{{products.images[0]}}" alt=""> </div>
                                             <div class="info">
-                                                <h5>{{packages.name}}</h5>  
-                                                <span>Bern, 2022</span> 
+                                                <h5>{{products.name}}</h5>  
+                                                <span (click)="viewProducts(products)">See now</span> 
                                             </div>
                                         </div>
                                     </div>
@@ -200,7 +202,7 @@
         <div class="row">
             <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)">
                 <div class="services-item" >
-                    <img class="services-img" src="assets/assetsEli/images/services/1.jpg" alt="">
+                    <img class="services-img" src="{{packages.images[0]}}" alt="">
                         <div class="services-caption">
                             <div class="services-subtitle"><a >{{packages.name}}</a></div>
                                 <div class="services-title"><a >{{packages.price}}</a></div>
@@ -309,12 +311,9 @@
             <!-- 2 columns -->
             <div class="col-md-6">
                 <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/10.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
+                    <div class="vid-icon"> 
+                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@elifotografia81/video/7288683523173518597" data-video-id="7288683523173518597" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@elifotografia81" href="https://www.tiktok.com/@elifotografia81?refer=embed">@elifotografia81</a> Sesion para revien nacido tematica old school 😍 con los colores de temporada . <a title="mamasboy💙" target="_blank" href="https://www.tiktok.com/tag/mamasboy%F0%9F%92%99?refer=embed">#mamasboy💙</a> <a title="boy" target="_blank" href="https://www.tiktok.com/tag/boy?refer=embed">#boy</a> <a title="fotos" target="_blank" href="https://www.tiktok.com/tag/fotos?refer=embed">#fotos</a><a title="bebes" target="_blank" href="https://www.tiktok.com/tag/bebes?refer=embed">#bebes</a> <a title="sesiondefotos" target="_blank" href="https://www.tiktok.com/tag/sesiondefotos?refer=embed">#sesiondefotos</a> <a title="reciennacido" target="_blank" href="https://www.tiktok.com/tag/reciennacido?refer=embed">#reciennacido</a> <a title="coloresdeotoño🍁🍂🍁🍂" target="_blank" href="https://www.tiktok.com/tag/coloresdeoto%C3%B1o%F0%9F%8D%81%F0%9F%8D%82%F0%9F%8D%81%F0%9F%8D%82?refer=embed">#coloresdeotoño🍁🍂🍁🍂</a> <a title="otoñooutfits" target="_blank" href="https://www.tiktok.com/tag/oto%C3%B1ooutfits?refer=embed">#otoñooutfits</a> <a title="otoñoinvierno2023" target="_blank" href="https://www.tiktok.com/tag/oto%C3%B1oinvierno2023?refer=embed">#otoñoinvierno2023</a> <a target="_blank" title="♬ I&#39;m Yours - Instrumental Pop Players" href="https://www.tiktok.com/music/I'm-Yours-6717101435252639745?refer=embed">♬ I&#39;m Yours - Instrumental Pop Players</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+                           
                     </div>
                 </div>
             </div>

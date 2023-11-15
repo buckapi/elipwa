@@ -1,0 +1,23 @@
+
+<div class="bethany-services-section mb-60">
+
+    <div class="container" *ngIf="yeoman.previewProducts!==undefined" >
+        <div class="row">
+            <div class="col-md-6 mb-30" > 
+                <img src="{{yeoman.previewProducts.images[0]}}" alt=""> </div>
+        
+            <div class="col-md-6">
+                <h3 class="signature">{{yeoman.previewProducts.name}}</h3>
+                <hr class="line line-hr-left">
+                <h4 class="signature1">{{yeoman.previewProducts.description}}</h4>
+                <p><strong>$ {{yeoman.previewProducts.price}}</strong></p>
+                <button class=""  (click)="setRoute('products')">Apply now</button>
+                <hr class="line line-hr-center">
+                <button class=""  (click)="setRoute('products')">All products</button>
+
+            </div>
+        </div>
+       
+
+    </div>
+</div>

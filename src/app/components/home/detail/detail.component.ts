@@ -20,19 +20,19 @@ export class DetailComponent implements AfterViewInit {
   ) { }
  
  
-  // setRoute(par:any){
-  //   let parametro=par;
-  // this.yeoman.virtualRoute=parametro;
-  // }
   //   view(id:any){
   //  let preview=this.yeoman.categories[id];
   //   console.log("id: "+id+"preview name: ");
   //   console.log(JSON.stringify(preview));
   //   this.setRoute('');
   // }
- 
+  setRoute(par:any){
+    let parametro=par;
+  this.yeoman.virtualRoute=parametro;
+  }
   ngAfterViewInit(): void {
     // this.cdr.detectChanges();
+    window.scrollTo(0, 0);
   }
  
 

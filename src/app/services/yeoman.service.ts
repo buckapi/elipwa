@@ -7,7 +7,7 @@ export class Yeoman {
   isLoaded:Boolean=false;
   virtualRoute:string="first";
   categorySelected:string="first";
-  products:any=[];
+  products:any={};
    previewCategory:any={
     images: [
       {}
@@ -38,6 +38,16 @@ export class Yeoman {
     includes:"",
     idCategory:"",
   };
+  previewProducts:any={
+  images: [
+    {}
+  ],
+  ref:"",
+  name:"",
+  title:"",
+  description:"",
+  price:"",
+};
   preview:any={};
   categories:any={};
   allcategory:any=[];

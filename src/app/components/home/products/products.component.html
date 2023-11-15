@@ -1,0 +1,82 @@
+<!-- products deteil -->
+<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="1" data-background="assets/assetsEli/images/banner/family.jpg" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h1>Products</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- products deteil -->
+<div class="section-padding" >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="signature1">Our Products</h2>
+                <hr class="line line-hr-center">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4" *ngFor="let products of allProducts; let i = index" (click)="viewProducts(products)">
+                <div class="services-item" >
+                    <img class="services-img" src="{{products.images[0]}}" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle" ><a >{{ products.name }}</a></div>
+
+                                <div class="services-title"><a >View more</a></div>
+                        </div>
+                </div>
+                <div style="text-align: center;  margin-bottom: 20px;">
+                    <div class="services-subtitle" ><a >{{ products.name }}</a></div>
+                    <div class="" ><a >{{ products.price }}</a></div>
+                </div>
+            </div>
+            <!-- <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/2.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Master of Ceremonies</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/3.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Corporate Events</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/4.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
+                                <div class="services-title"><a href="services-page.html">Destination Wedding</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/5.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Birthday Party Planner</a></div>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="services-item">
+                    <img class="services-img" src="assets/assetsEli/images/services/6.jpg" alt="">
+                        <div class="services-caption">
+                            <div class="services-subtitle"><a href="services-page.html">Events</a></div>
+                                <div class="services-title"><a href="services-page.html">Special Events</a></div>
+                        </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

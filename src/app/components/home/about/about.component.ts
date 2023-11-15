@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
+import { Yeoman } from '@app/services/yeoman.service';
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router,
+    public yeoman: Yeoman
+  ) { }
+  setRoute(par:any){
+    let parametro=par;
+  this.yeoman.virtualRoute=parametro;
+  }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
 }
