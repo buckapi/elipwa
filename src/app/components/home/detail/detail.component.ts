@@ -1,4 +1,5 @@
 import { Component, OnInit ,ChangeDetectorRef,AfterViewInit} from '@angular/core';
+import { RestService } from '@app/services/rest.service';
 import { Yeoman } from '@app/services/yeoman.service';
 
 
@@ -8,15 +9,17 @@ import { Yeoman } from '@app/services/yeoman.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements AfterViewInit {
-  products:any=[];
-  categories:any=[];
+  products:any;
+  categories:any;
+  allPackages:any;
   element:any;
   previewPackages: boolean = false;
   previewCategory: any;
   
   constructor(
     private cdr: ChangeDetectorRef,
-    public yeoman:Yeoman
+    public yeoman:Yeoman,
+    public restService: RestService
   ) { }
  
  
@@ -26,9 +29,18 @@ export class DetailComponent implements AfterViewInit {
   //   console.log(JSON.stringify(preview));
   //   this.setRoute('');
   // }
+  getAllPackages(){
+    this.restService.getAllPackages().subscribe(response=>{
+      this.allPackages=response;
+    });
+  }
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
+  }
+  viewPackages(packages:any){
+    this.yeoman.previewPackages=packages;
+    this.setRoute('detail');
   }
   ngAfterViewInit(): void {
     // this.cdr.detectChanges();

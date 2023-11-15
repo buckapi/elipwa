@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <div class="signature2" ><h2>Professional Photography for Every Occasion</h2></div>
-                <div class="signature">Services</div>
+                <div class="signature" style="cursor: pointer;" (click)="setRoute('shop')">Services</div>
             </div>
         </div> 
         <div class="row">
@@ -18,6 +18,14 @@
                                                 <div class="bethany-slider-subtitle"><a style="cursor: pointer;">{{ category.name }}</a></div>
                                                 <h4 style="cursor: pointer;">View more</h4>
                                             </div>
+                                    </div>
+                                    <div class="swiper-slide bethany-slider-item">
+                                        <img class="bethany-slider-img" src="assets/assetsEli/images/gallery/2.jpg" alt="">
+                                        
+                                        <div class="bethany-slider-caption">
+                                            <div class="bethany-slider-subtitle"><a style="cursor: pointer;"(click)="setRoute('shop')">All Services</a></div>
+                                           
+                                        </div>
                                     </div>
                                 </div>
                             </swiper>
@@ -199,8 +207,13 @@
                 <hr class="line line-hr-center">
             </div>
         </div>
+
         <div class="row">
-            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)">
+            <div class="col-md-12 botonAll">
+                <button class=""  (click)="setRoute('packages')">All Packages</button>
+            </div>
+
+            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" [hidden]="i >= 5">
                 <div class="services-item" >
                     <img class="services-img" src="{{packages.images[0]}}" alt="">
                         <div class="services-caption">
@@ -211,10 +224,11 @@
             </div>
            
         </div>
+
     </div>
 </div>
 <!-- Productos -->
-<!-- <div class="section-padding">
+<!--  <div class="section-padding">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
@@ -235,7 +249,7 @@
          
         </div>
     </div>
-</div> -->
+</div>  -->
 <!-- galery -->
 <!-- <div class="section-padding" style="padding: 20px 0;">
 <div class="container">
@@ -311,9 +325,12 @@
             <!-- 2 columns -->
             <div class="col-md-6">
                 <div class="vid-area mb-30">
-                    <div class="vid-icon"> 
-                        <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@elifotografia81/video/7288683523173518597" data-video-id="7288683523173518597" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@elifotografia81" href="https://www.tiktok.com/@elifotografia81?refer=embed">@elifotografia81</a> Sesion para revien nacido tematica old school 😍 con los colores de temporada . <a title="mamasboy💙" target="_blank" href="https://www.tiktok.com/tag/mamasboy%F0%9F%92%99?refer=embed">#mamasboy💙</a> <a title="boy" target="_blank" href="https://www.tiktok.com/tag/boy?refer=embed">#boy</a> <a title="fotos" target="_blank" href="https://www.tiktok.com/tag/fotos?refer=embed">#fotos</a><a title="bebes" target="_blank" href="https://www.tiktok.com/tag/bebes?refer=embed">#bebes</a> <a title="sesiondefotos" target="_blank" href="https://www.tiktok.com/tag/sesiondefotos?refer=embed">#sesiondefotos</a> <a title="reciennacido" target="_blank" href="https://www.tiktok.com/tag/reciennacido?refer=embed">#reciennacido</a> <a title="coloresdeotoño🍁🍂🍁🍂" target="_blank" href="https://www.tiktok.com/tag/coloresdeoto%C3%B1o%F0%9F%8D%81%F0%9F%8D%82%F0%9F%8D%81%F0%9F%8D%82?refer=embed">#coloresdeotoño🍁🍂🍁🍂</a> <a title="otoñooutfits" target="_blank" href="https://www.tiktok.com/tag/oto%C3%B1ooutfits?refer=embed">#otoñooutfits</a> <a title="otoñoinvierno2023" target="_blank" href="https://www.tiktok.com/tag/oto%C3%B1oinvierno2023?refer=embed">#otoñoinvierno2023</a> <a target="_blank" title="♬ I&#39;m Yours - Instrumental Pop Players" href="https://www.tiktok.com/music/I'm-Yours-6717101435252639745?refer=embed">♬ I&#39;m Yours - Instrumental Pop Players</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
-                           
+                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
+                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
+                            <span class="video-gallery-polygon">
+                                <i class="ti-control-play"></i>
+                            </span>
+                        </a>
                     </div>
                 </div>
             </div>

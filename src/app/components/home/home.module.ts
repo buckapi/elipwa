@@ -14,6 +14,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { ProductsComponent } from './products/products.component';
 import { DetailProductsComponent } from './detail-products/detail-products.component';
+import { DetailPackagesComponent } from './detail-packages/detail-packages.component';
+import { PackagesComponent } from './packages/packages.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -24,7 +26,9 @@ import { DetailProductsComponent } from './detail-products/detail-products.compo
     AboutComponent,
     CategoriesComponent,
     ProductsComponent,
-    DetailProductsComponent
+    DetailProductsComponent,
+    DetailPackagesComponent,
+    PackagesComponent
   ],
   imports: [
     FormsModule,

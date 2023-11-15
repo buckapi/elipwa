@@ -90,7 +90,7 @@ export class FirstComponent implements AfterViewInit {
   }
   viewPackages(packages:any){
     this.yeoman.previewPackages=packages;
-    this.setRoute('detail');
+    this.setRoute('detail-packages');
   }
   viewProducts(products:any){
     this.yeoman.previewProducts=products;
