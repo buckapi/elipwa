@@ -12,21 +12,14 @@
                         <div class="">
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
-                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="view(category)" style="cursor: pointer;">
+                                    <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="viewCategory(category)" style="cursor: pointer;">
                                         <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
                                             <div class="bethany-slider-caption">
                                                 <div class="bethany-slider-subtitle"><a style="cursor: pointer;">{{ category.name }}</a></div>
-                                                <h4 style="cursor: pointer;">View more</h4>
+                                                <h4 style="cursor: pointer;" >View more</h4>
                                             </div>
                                     </div>
-                                    <div class="swiper-slide bethany-slider-item">
-                                        <img class="bethany-slider-img" src="assets/assetsEli/images/gallery/2.jpg" alt="">
-                                        
-                                        <div class="bethany-slider-caption">
-                                            <div class="bethany-slider-subtitle"><a style="cursor: pointer;"(click)="setRoute('shop')">All Services</a></div>
-                                           
-                                        </div>
-                                    </div>
+    
                                 </div>
                             </swiper>
                     

@@ -66,8 +66,8 @@ config2: SwiperOptions = {
     let parametro=par;
     this.yeoman.virtualRoute=parametro;
   }
-  view(id:any){
-    this.yeoman.preview=this.yeoman.products[id];
+  view(category:any){
+    this.yeoman.preview=category;
     this.setRoute('detail');
   }
 
@@ -84,6 +84,10 @@ getAllPackages(){
 }
 viewPackages(packages:any){
   this.yeoman.previewPackages=packages;
+  this.setRoute('detail');
+}
+viewCategory(category:any){
+  this.yeoman.previewCategory=category;
   this.setRoute('detail');
 }
 ngOnInit(): void {

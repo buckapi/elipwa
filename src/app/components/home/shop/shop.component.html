@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4" *ngFor="let category of categories; let i = index" (click)="view(category)">
+            <div class="col-md-4" *ngFor="let category of categories; let i = index" (click)="viewCategory(category)">
                 <div class="services-item" >
                     <img class="services-img" src="{{category.images[0]}}" alt="">
                         <div class="services-caption">

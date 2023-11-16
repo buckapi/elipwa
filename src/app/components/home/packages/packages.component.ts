@@ -25,6 +25,8 @@ export class PackagesComponent implements OnInit {
  this.yeoman.virtualRoute=parametro;
  }
  viewPackages(packages:any){
+
+  this.yeoman.previewPackages=null;
    this.yeoman.previewPackages=packages;
    this.setRoute('detail-packages');
  }
