@@ -9,7 +9,7 @@ import { SwiperOptions } from 'swiper';
   styleUrls: ['./shop.component.css']
 })
 export class ShopComponent implements AfterViewInit {
-products:any=[];
+products:any;
 categories:any;
 category:any;
 allProducts:any;

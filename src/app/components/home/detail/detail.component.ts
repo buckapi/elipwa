@@ -13,7 +13,7 @@ export class DetailComponent implements AfterViewInit {
   categories:any;
   allPackages:any;
   element:any;
-  previewPackages: boolean = false;
+ /*  previewPackages: boolean = false; */
   previewCategory: any;
   
   constructor(

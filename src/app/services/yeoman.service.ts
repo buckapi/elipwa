@@ -7,10 +7,9 @@ export class Yeoman {
   isLoaded:Boolean=false;
   virtualRoute:string="first";
   categorySelected:string="first";
-  products:any={};
    previewCategory:any={
     images: [
-      {}
+      []
     ],
     name: "",
     subname: "",
@@ -52,10 +51,11 @@ export class Yeoman {
   categories:any={};
   allcategory:any=[];
   allCategoriesSize:number=0;
-  cart:any;
-  car:any[]=[];
-  
-  ticket:any[]=[];
+  products:any={};
+  package:any={};
+  allAlbums:any=[];
+  allPackages:any=[];
+  allProducts:any=[];
   currency:number=1;
   init:number=1;
   end:number=12;
@@ -103,12 +103,8 @@ export class Yeoman {
   userType:string=""; 
   email:string=""; 
   cards:any[]=[]; 
-
   serialT:number=0;
-  package:any={};
-  allAlbums:any=[];
-  allPackages:any=[];
-  allProducts:any=[];
+  
   config: {
     clientSelected:number;
   } = {clientSelected:-1} ;

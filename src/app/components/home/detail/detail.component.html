@@ -2,7 +2,7 @@
     <div class="container" *ngIf="yeoman.previewCategory!==undefined" >
         <div class="row">
             <div class="col-md-6 mb-30" > 
-                <img src="{{yeoman.previewCategory.images[0]}}" alt=""> 
+                <img *ngIf="yeoman.previewCategory.images[0]" src="{{yeoman.previewCategory.images[0]}}" alt=""> 
             </div>
             <div class="col-md-6">
                 <h3>{{yeoman.previewCategory.name}}</h3>
@@ -11,7 +11,7 @@
                 <p><strong>{{yeoman.previewCategory.description1}}</strong></p>
                 <p>{{yeoman.previewCategory.description2}}</p>
                 <p><strong>{{yeoman.previewCategory.description3}}</strong></p>
-                <button class=""  (click)="setRoute('detail-packages')">Vew Packages</button>
+                <button class=""  (click)="setRoute('packages')">Vew Packages</button>
                 <hr class="line line-hr-center">
                 <button class=""  (click)="setRoute('shop')">All services</button>
             </div>
@@ -71,37 +71,4 @@
     </div>
     
 </div>
-<!-- <div class="bethany-services-section mb-60 bg-1"  >
-<div class="container" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" [hidden]="i >= 5">
-    <div class="row">
-        <div class="col-md-6 gallery-item"  >
-            <a href="{{packages.images[0]}}" title="" class="img-zoom">
-            
-            </a>
-            <p>"{{packages.name}}</p>
-            <strong>{{packages.preci}}</strong>
-        </div>
-       
-    </div> 
-</div>
-</div> -->
-<!-- <div class="bethany-services-section mb-60" [hidden]="previewCategory">
-    <div class="container" *ngIf="yeoman.previewPackages!==undefined" >
-        <div class="row">
-            <div class="col-md-6 mb-30" > 
-                <img src="{{yeoman.previewPackages.images[0]}}" alt=""> </div>
-        
-            <div class="col-md-6">
-                <h3>{{yeoman.previewPackages.name}}</h3>
-                <hr class="line line-hr-left">
-                <h4 class="signature1">{{yeoman.previewPackages.subname}}</h4>
-                <p><strong>{{yeoman.previewPackages.description1}}</strong></p>
-                <p>{{yeoman.previewPackages.description2}}</p>
-                <p><strong>{{yeoman.previewPackages.description3}}</strong></p>
-                <button class=""  (click)="setRoute('shop')">Apply now</button>
-                <hr class="line line-hr-center">
-                <button class=""  (click)="setRoute('shop')">All products</button>
-            </div>
-        </div>
-    </div>
-</div> -->
+

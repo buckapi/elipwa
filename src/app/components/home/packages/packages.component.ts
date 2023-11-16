@@ -26,7 +26,7 @@ export class PackagesComponent implements OnInit {
  }
  viewPackages(packages:any){
    this.yeoman.previewPackages=packages;
-   this.setRoute('detail');
+   this.setRoute('detail-packages');
  }
   ngOnInit(): void {
   }
