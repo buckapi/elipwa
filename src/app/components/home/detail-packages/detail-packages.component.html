@@ -5,21 +5,28 @@
                 <img *ngIf="yeoman.previewPackages.images[0]" src="{{yeoman.previewPackages.images[0]}}" alt=""> </div>
         
             <div class="col-md-6">
-                <h3>{{yeoman.previewPackages.title}}</h3>
+                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
                 <hr class="line line-hr-left">
                 <h4 class="signature1">{{yeoman.previewPackages.name}}</h4>
-                <p><strong>{{yeoman.previewPackages.description}}</strong></p>
-                <p>{{yeoman.previewPackages.placeSession}}</p>
-                <p><strong>{{yeoman.previewPackages.clothing}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.numberPhoto}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.price}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.numberSession}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.duration}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.includes}}</strong></p>
-                <p><strong>{{yeoman.previewPackages.note}}</strong></p>
+                <p><strong class="signature1">Quantity of photos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
+                <p><strong class="signature1">Price:</strong> {{yeoman.previewPackages.price}}</p>
+                <p><strong class="signature1">Number session:</strong> {{yeoman.previewPackages.numberSession}}</p>
+                <p><strong class="signature1">Duration:</strong> {{yeoman.previewPackages.duration}}</p>
+                <p><strong class="signature1">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
+                <p><strong class="signature1">Notes:</strong> {{yeoman.previewPackages.note}}</p>
                 <!-- <button class=""  (click)="setRoute('shop')">Apply now</button>
                 <hr class="line line-hr-center"> -->
                 <button class=""  (click)="setRoute('packages')">All packages</button>
+            </div>
+            <div class="col-md-12">
+                
+                
+                <p><strong class="signature1">Description</strong>{{yeoman.previewPackages.description}}</p>
+                <p><strong class="signature1">Photo session location</strong>{{yeoman.previewPackages.placeSession}}</p>
+                <p><strong class="signature1">Cloting </strong>{{yeoman.previewPackages.clothing}}</p>                
+                <p><strong class="signature1">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
+                <p><strong class="signature1">Notes:</strong> {{yeoman.previewPackages.note}}</p>
+                
             </div>
         </div>
     </div>
@@ -27,12 +34,12 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <h2>F.A.Qs</h2>
+                    <h2 class="signature1">F.A.Qs</h2>
                     <hr class="line line-hr-center">
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 offset-md-2 faqs-accordion" >
+                <div class="col-md-12  faqs-accordion">
                     <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs">
                         <div class="item" >
                             <div class="title">

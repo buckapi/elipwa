@@ -3,3 +3,24 @@
 }
 a {
     color: darkgoldenrod;}
+
+.faqs-accordion .accordion .title {
+padding: 18px 60px 18px 20px;
+background: #d9ffff;
+cursor: pointer;
+position: relative;
+border: 2px solid #a2783a;
+}
+.signature1 {
+font-family: Signatie;
+color: darkgoldenrod;
+}
+
+.accordion-info {
+    display: none;
+  }
+  .accordion-info.active {
+    display: block;
+  }
+  
+  

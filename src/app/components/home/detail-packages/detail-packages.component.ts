@@ -7,8 +7,10 @@ import { Yeoman } from '@app/services/yeoman.service';
   templateUrl: './detail-packages.component.html',
   styleUrls: ['./detail-packages.component.css']
 })
+
 export class DetailPackagesComponent implements OnInit {
   allPackages:any;
+  faq:any;
   constructor(
     public yeoman: Yeoman,
     public restService: RestService
@@ -28,6 +30,10 @@ export class DetailPackagesComponent implements OnInit {
     this.yeoman.previewPackages=packages;
     this.setRoute('detail');
   }
+ /*  toggleAccordion(faq) {
+    faq.isActive = !faq.isActive;
+  } */
+  
   ngOnInit(): void {
   }
 

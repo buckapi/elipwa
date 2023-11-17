@@ -36,16 +36,18 @@ export class Yeoman {
     note:"",
     includes:"",
     idCategory:"",
+    faqs: [{ p: '', r: '' }]
   };
   previewProducts:any={
   images: [
     {}
   ],
-  ref:"",
-  name:"",
-  title:"",
-  description:"",
-  price:"",
+  name: '',
+  size:'',
+  description:'',
+  price:'',
+  ref: '',
+   idCategory: '',
 };
   preview:any={};
   categories:any={};

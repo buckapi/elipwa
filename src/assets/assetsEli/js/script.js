@@ -119,7 +119,7 @@
         }
     });
     // Clients owlCarousel
-   /*  $('.clients .owl-carousel').owlCarousel({
+  $('.clients .owl-carousel').owlCarousel({
         loop: true
         , margin: 30
         , mouseDrag: true
@@ -138,7 +138,7 @@
                 items: 5
             }
         }
-    }); */
+    }); 
     // Testimonials owlCarousel
     $('.testimonials .testim').slick({
         slidesToShow: 2,
