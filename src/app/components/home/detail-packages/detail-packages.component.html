@@ -5,15 +5,86 @@
                 <img *ngIf="yeoman.previewPackages.images[0]" src="{{yeoman.previewPackages.images[0]}}" alt=""> </div>
         
             <div class="col-md-6">
-                <h3>{{yeoman.previewPackages.name}}</h3>
+                <h3>{{yeoman.previewPackages.title}}</h3>
                 <hr class="line line-hr-left">
-                <h4 class="signature1">{{yeoman.previewPackages.subname}}</h4>
-                <p><strong>{{yeoman.previewPackages.description1}}</strong></p>
-                <p>{{yeoman.previewPackages.description2}}</p>
-                <p><strong>{{yeoman.previewPackages.description3}}</strong></p>
+                <h4 class="signature1">{{yeoman.previewPackages.name}}</h4>
+                <p><strong>{{yeoman.previewPackages.description}}</strong></p>
+                <p>{{yeoman.previewPackages.placeSession}}</p>
+                <p><strong>{{yeoman.previewPackages.clothing}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.numberPhoto}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.price}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.numberSession}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.duration}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.includes}}</strong></p>
+                <p><strong>{{yeoman.previewPackages.note}}</strong></p>
                 <!-- <button class=""  (click)="setRoute('shop')">Apply now</button>
                 <hr class="line line-hr-center"> -->
                 <button class=""  (click)="setRoute('packages')">All packages</button>
+            </div>
+        </div>
+    </div>
+    <div class="section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2>F.A.Qs</h2>
+                    <hr class="line line-hr-center">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 offset-md-2 faqs-accordion" >
+                    <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs">
+                        <div class="item" >
+                            <div class="title">
+                                <h6>¿{{faq.p}}?</h6>
+                            </div>
+                            <div class="accordion-info active" style="display: none;">
+                                <p>{{faq.r}}</p>
+                            </div>
+                        </div>
+                        <!-- <div class="item">
+                            <div class="title">
+                                <h6>What will working with a wedding planner entail?</h6>
+                            </div>
+                            <div class="accordion-info" style="display: none;">
+                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">
+                                <h6>What happens on the wedding day itself?</h6>
+                            </div>
+                            <div class="accordion-info" style="display: none;">
+                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">
+                                <h6>How many weddings do you take on each year?</h6>
+                            </div>
+                            <div class="accordion-info" style="display: none;">
+                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">
+                                <h6>Do you have insurance?</h6>
+                            </div>
+                            <div class="accordion-info" style="display: none;">
+                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="title">
+                                <h6>Will you be there on our wedding day?</h6>
+                            </div>
+                            <div class="accordion-info" style="display: none;">
+                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+               
             </div>
         </div>
     </div>
@@ -21,11 +92,17 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <p>Thank you so much for reaching out to us - we are excited to connect with you! Tell us about you. If you do not receive response within 24 hours, please contact us directly email or phone.</p>
+                    <div class="col-md-6">
+                        <p>Thank you so much for reaching out to us - we are excited to connect with you! </p>
                         <p><b>Phone :</b> +1.123.444.0000</p>
-                        <p><b>eMail :</b> </p>
-                        <p><b>Address :</b> Broadway 5 St Normain New York 98499, USA</p>
+                        <p><b>Email :</b> elifotografia81@gmail.com</p>
+                       <p><b>follow me :</b>@elifotografia81</p>
+                        <div class="social-icon">
+                            <a href="https://web.facebook.com/profile.php?id=100083357140289&mibextid=LQQJ4d&_rdc=1&_rdr" target="_blank"><i class="ti-facebook" style="padding: 5px;"></i> </a>
+                            <a href="https://www.instagram.com/elifotografia81/" target="_blank"><i class="ti-instagram" style="padding: 5px;"></i>  </a>
+                            <a href="https://www.tiktok.com/@elifotografia81/" target="_blank"> <img src="assets/assetsEli/images/tiktok.png" style="max-width: 35px; padding: 5px; padding-bottom: 11px;"> </a>
+    
+                        </div>
                     </div>
                     <div class="col-md-5 offset-md-1">
                         <h5 class="mb-30">We look forward to being in touch!</h5>
