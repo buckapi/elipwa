@@ -9,10 +9,12 @@ import { Router } from '@angular/router';
   styleUrls: ['./first.component.css']
 })
 export class FirstComponent implements AfterViewInit {
+  products:any;
   categories:any;
   allPackages:any;
   allProducts:any;
-  products:any;
+  allAlbums:any;
+  
   config: SwiperOptions = {
     a11y: { enabled: true },
     direction: 'horizontal',
