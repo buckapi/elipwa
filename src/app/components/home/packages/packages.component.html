@@ -1,18 +1,34 @@
-<div class="bethany-services-section mb-60 bg-1"  >
+<div class="banner-header valign bg-img bg-fixed" data-overlay-dark="1" data-background="assets/assetsEli/images/banner/banner2.jpg">
     <div class="container">
+        <div class="row">
+            <div class="col-md-12" style="text-align: end;">
+                <h1>Tailor-made Photo Packages for Unforgettable Moments</h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-padding"  >
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2 class="signature1" style="color: darkgoldenrod;">Our Packages</h2>
+                <hr class="line line-hr-center">
+                <p>At Eli-Photography, we transform special moments into lasting memories.</p>
+                <p>Our varied and personalised packages capture everything from baby portraits to weddings, creating images that tell your story.</p>
+            </div>
+        </div>
         <div class="row">
             
             <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" [hidden]="i >= 5">
                 <div class="services-item" >
                     <img class="services-img" src="{{packages.images[0]}}" alt="">
                         <div class="services-caption">
-                            <div class="services-subtitle"><a >{{packages.name}}</a></div>
-                                <div class="services-title"><a >{{packages.price}}</a></div>
+                            <div class="services-title"><a >View details</a></div>
                         </div>
                 </div>
 <!--                 <div class=""><a >{{packages.idCategory}}</a></div>
- -->                <div class="services-subtitle"><a >{{packages.name}}</a></div>
-                <div class="services-title"><a >$ {{packages.price}}</a></div>
+ -->                <div class="services-subtitle" style="text-align: center;"><a >{{packages.name}}</a></div>
+                <div class="services-title" style="text-align: center;"><a >$ {{packages.price}}</a></div>
             </div>
             <!-- <div class="col-md-6 gallery-item">
                 <a href="assets/assetsEli/images/blog/b.jpg" title="" class="img-zoom">
