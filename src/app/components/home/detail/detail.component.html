@@ -1,6 +1,9 @@
 <div class="bethany-services-section mb-60 bg-1"  >
     <div class="container" *ngIf="yeoman.previewCategory!==undefined" >
         <div class="row">
+            <div class="col-md-12" style="padding-bottom: 2%;">
+                <button class=""  (click)="setRoute('shop')">All services</button>
+            </div>
             <div class="col-md-6 mb-30" > 
                 <img *ngIf="yeoman.previewCategory.images[0]" src="{{yeoman.previewCategory.images[0]}}" alt=""> 
             </div>
@@ -11,9 +14,7 @@
                 <p><strong>{{yeoman.previewCategory.description1}}</strong></p>
                 <p>{{yeoman.previewCategory.description2}}</p>
                 <p><strong>{{yeoman.previewCategory.description3}}</strong></p>
-                <!-- <button class=""  (click)="setRoute('packages')">Vew Packages</button> -->
-                <hr class="line line-hr-center">
-                <button class=""  (click)="setRoute('shop')">All services</button>
+                <button class=""  (click)="setRoute('packages')">View packages</button>
             </div>
            
         </div>

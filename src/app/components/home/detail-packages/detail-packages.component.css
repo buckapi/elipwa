@@ -22,5 +22,75 @@ color: darkgoldenrod;
   .accordion-info.active {
     display: block;
   }
+/* Estilos para la imagen */
+.img-responsive {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+  transform: scale(1.05);
+}
+
+/* Estilos para títulos y subtítulos */
+.package-title, .package-name {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  text-align: left;
+}
+
+.package-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.package-name {
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+
+
+.price-info {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Estilos para la descripción del paquete */
+.package-description {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+/* Estilos para la sección de FAQs */
+.faqs-accordion .item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 10px;
+}
+
+.faqs-accordion .title h6 {
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Estilos para el formulario de contacto */
+.contact-heading {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.contact__form input, .contact__form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+}
+
+
+
   
   

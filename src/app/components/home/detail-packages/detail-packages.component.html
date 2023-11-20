@@ -1,155 +1,185 @@
+ 
 <div class="bethany-services-section mb-60">
-    <div class="container" *ngIf="yeoman.previewPackages!==undefined" >
+    <div class="container" *ngIf="yeoman.previewPackages!==undefined">
         <div class="row">
-            <div class="col-md-6 mb-30" > 
-                <img *ngIf="yeoman.previewPackages.images[0]" src="{{yeoman.previewPackages.images[0]}}" alt=""> </div>
-        
-            <div class="col-md-6">
-                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
-                <hr class="line line-hr-left">
-                <h4 class="signature1">{{yeoman.previewPackages.name}}</h4>
-                <p><strong class="signature1">Quantity of photos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
-                <p><strong class="signature1">Price:</strong> {{yeoman.previewPackages.price}}</p>
-                <p><strong class="signature1">Number session:</strong> {{yeoman.previewPackages.numberSession}}</p>
-                <p><strong class="signature1">Duration:</strong> {{yeoman.previewPackages.duration}}</p>
-                <p><strong class="signature1">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
-                <p><strong class="signature1">Notes:</strong> {{yeoman.previewPackages.note}}</p>
-                <!-- <button class=""  (click)="setRoute('shop')">Apply now</button>
-                <hr class="line line-hr-center"> -->
+            <div class="col-md-12" style="padding-bottom: 2%;">
                 <button class=""  (click)="setRoute('packages')">All packages</button>
             </div>
-            <div class="col-md-12">
-                
-                
-                <p><strong class="signature1">Description</strong>{{yeoman.previewPackages.description}}</p>
-                <p><strong class="signature1">Photo session location</strong>{{yeoman.previewPackages.placeSession}}</p>
-                <p><strong class="signature1">Cloting </strong>{{yeoman.previewPackages.clothing}}</p>                
-                <p><strong class="signature1">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
-                <p><strong class="signature1">Notes:</strong> {{yeoman.previewPackages.note}}</p>
-                
+            <div class="col-md-12 mb-30">                 
+                <img *ngIf="yeoman.previewPackages.images[0]" src="{{yeoman.previewPackages.images[0]}}" alt=""> 
             </div>
         </div>
-    </div>
-    <div class="section-padding">
-        <div class="container">
-            <div class="row">
+        <div class="row">
+            <div class="col-md-12">
+                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
+                <h4>{{yeoman.previewPackages.name}}</h4>
+                <h4><strong class="">Price:</strong>$ {{yeoman.previewPackages.price}}</h4>
+            </div>
+        </div>
+        <div class="row mb-5">
+            <div class="col-md-12">
+                <p>{{yeoman.previewPackages.description}}</p>
+                
+            </div>
+            <div class="col-md-6">
+                <h5>Package Includes</h5>
+                <p><b>1.</b><strong class="">Quantity of photos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
+                <p><b>2.</b><strong class="">Number session:</strong> {{yeoman.previewPackages.numberSession}}</p>
+                <p><b>3.</b><strong class="">Duration:</strong> {{yeoman.previewPackages.duration}}</p>
+                <p><b>4.</b><strong class="">Photo session location</strong>{{yeoman.previewPackages.placeSession}}</p>
+                <p><b>5.</b><strong class="">Cloting </strong>{{yeoman.previewPackages.clothing}}</p>                
+                <p><b>6.</b><strong class="">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
+                <p><b>7.</b><strong class="">Notes:</strong> {{yeoman.previewPackages.note}}</p>
+               
+            </div>
+            <div class="col-md-6  faqs-accordion">
                 <div class="col-md-12 text-center">
                     <h2 class="signature1">F.A.Qs</h2>
                     <hr class="line line-hr-center">
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12  faqs-accordion">
-                    <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs">
-                        <div class="item" >
-                            <div class="title">
-                                <h6>¿{{faq.p}}?</h6>
-                            </div>
-                            <div class="accordion-info active" style="display: none;">
-                                <p>{{faq.r}}</p>
-                            </div>
+                <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs">
+                    <div class="item" >
+                        <div class="title">
+                            <h6>¿{{faq.p}}?</h6>
                         </div>
-                        <!-- <div class="item">
-                            <div class="title">
-                                <h6>What will working with a wedding planner entail?</h6>
-                            </div>
-                            <div class="accordion-info" style="display: none;">
-                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
-                            </div>
+                        <div class="accordion-info active" style="display: none;">
+                            <p>{{faq.r}}</p>
                         </div>
-                        <div class="item">
-                            <div class="title">
-                                <h6>What happens on the wedding day itself?</h6>
-                            </div>
-                            <div class="accordion-info" style="display: none;">
-                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <h6>How many weddings do you take on each year?</h6>
-                            </div>
-                            <div class="accordion-info" style="display: none;">
-                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <h6>Do you have insurance?</h6>
-                            </div>
-                            <div class="accordion-info" style="display: none;">
-                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="title">
-                                <h6>Will you be there on our wedding day?</h6>
-                            </div>
-                            <div class="accordion-info" style="display: none;">
-                                <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
-                            </div>
-                        </div> -->
                     </div>
+                    <!-- <div class="item">
+                        <div class="title">
+                            <h6>What will working with a wedding planner entail?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>What happens on the wedding day itself?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>How many weddings do you take on each year?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>Do you have insurance?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="title">
+                            <h6>Will you be there on our wedding day?</h6>
+                        </div>
+                        <div class="accordion-info" style="display: none;">
+                            <p>Mauris porttitor magna vel ante luctus convallis. Nunc at tellus erat. Donec et magna lectus. Aliquam egestas vel arcu id maximus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent sollicitudin feugiat elementum.</p>
+                        </div>
+                    </div> -->
                 </div>
-               
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/a.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/a.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/b.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/b.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/c.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/c.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-6 gallery-item">
+                <a href="assets/assetsEli/images/blog/d.jpg" title="" class="img-zoom">
+                    <div class="gallery-box">
+                        <div class="gallery-img"> <img src="assets/assetsEli/images/blog/d.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                    </div>
+                </a>
             </div>
         </div>
-    </div>
-    <div class="container" style=" padding-top: 30px;"> 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="row">
-                    <div class="col-md-6">
-                        <p>Thank you so much for reaching out to us - we are excited to connect with you! </p>
-                        <p><b>Phone :</b> +1.123.444.0000</p>
-                        <p><b>Email :</b> elifotografia81@gmail.com</p>
-                       <p><b>follow me :</b>@elifotografia81</p>
-                        <div class="social-icon">
-                            <a href="https://web.facebook.com/profile.php?id=100083357140289&mibextid=LQQJ4d&_rdc=1&_rdr" target="_blank"><i class="ti-facebook" style="padding: 5px;"></i> </a>
-                            <a href="https://www.instagram.com/elifotografia81/" target="_blank"><i class="ti-instagram" style="padding: 5px;"></i>  </a>
-                            <a href="https://www.tiktok.com/@elifotografia81/" target="_blank"> <img src="assets/assetsEli/images/tiktok.png" style="max-width: 35px; padding: 5px; padding-bottom: 11px;"> </a>
-    
+        <div class="container" style=" padding-top: 30px;"> 
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Thank you so much for reaching out to us - we are excited to connect with you! </p>
+                            <p><b>Phone :</b> +1.123.444.0000</p>
+                            <p><b>Email :</b> elifotografia81@gmail.com</p>
+                           <p><b>follow me :</b>@elifotografia81</p>
+                            <div class="social-icon">
+                                <a href="https://web.facebook.com/profile.php?id=100083357140289&mibextid=LQQJ4d&_rdc=1&_rdr" target="_blank"><i class="ti-facebook" style="padding: 5px;"></i> </a>
+                                <a href="https://www.instagram.com/elifotografia81/" target="_blank"><i class="ti-instagram" style="padding: 5px;"></i>  </a>
+                                <a href="https://www.tiktok.com/@elifotografia81/" target="_blank"> <img src="assets/assetsEli/images/tiktok.png" style="max-width: 35px; padding: 5px; padding-bottom: 11px;"> </a>
+        
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-5 offset-md-1">
-                        <h5 class="mb-30">We look forward to being in touch!</h5>
-                        <form method="post" class="contact__form" action="">
-                            <!-- Form message -->
-                            <div class="row">
-                                <div class="col-12">
-                                    <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                                        Your message was sent successfully.
+                        <div class="col-md-5 offset-md-1">
+                            <h5 class="mb-30">We look forward to being in touch!</h5>
+                            <form method="post" class="contact__form" action="">
+                                <!-- Form message -->
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="alert alert-success contact__msg" style="display: none" role="alert">
+                                            Your message was sent successfully.
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Form elements -->
-                            <div class="row">
-                                <div class="col-md-12 form-group">
-                                    <input name="name" type="text" placeholder="Full Name *" required> 
+                                <!-- Form elements -->
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <input name="name" type="text" placeholder="Full Name *" required> 
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="email" type="email" placeholder="Email Address *" required> 
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <input name="phone" type="text" placeholder="Phone *" required> 
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <input name="subject" type="text" placeholder="Services Type *" required> 
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <input name="subject" type="text" placeholder="Are you interested in makeup/hair service? *" required> 
+                                    </div>
+                                    <div class="col-md-12 form-group">
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input name="submit" type="submit" value="Send Message">
+                                    </div>
                                 </div>
-                                <div class="col-md-6 form-group">
-                                    <input name="email" type="email" placeholder="Email Address *" required> 
-                                </div>
-                                <div class="col-md-6 form-group">
-                                    <input name="phone" type="text" placeholder="Phone *" required> 
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <input name="subject" type="text" placeholder="Services Type *" required> 
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <input name="subject" type="text" placeholder="Are you interested in makeup/hair service? *" required> 
-                                </div>
-                                <div class="col-md-12 form-group">
-                                    <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
-                                </div>
-                                <div class="col-md-12">
-                                    <input name="submit" type="submit" value="Send Message">
-                                </div>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        </div>
-</div> 
+            </div>
+    </div>
+</div>

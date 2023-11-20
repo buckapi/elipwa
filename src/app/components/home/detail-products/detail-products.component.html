@@ -3,6 +3,9 @@
 
     <div class="container" *ngIf="yeoman.previewProducts!==undefined" >
         <div class="row">
+            <div class="col-md-12" style="padding-bottom: 2%;">
+                <button class=""  (click)="setRoute('products')">All products</button>
+            </div>
             <div class="col-md-6 mb-30" > 
                 <img *ngIf="yeoman.previewProducts.images[0]" src="{{yeoman.previewProducts.images[0]}}" alt=""> </div>
         
@@ -14,8 +17,6 @@
                 <h4><strong class="signature1">Price:  </strong>$ {{yeoman.previewProducts.price}}</h4>
                 <button class=""  (click)="setRoute('products')">Apply now</button>
                 <hr class="line line-hr-center">
-                <button class=""  (click)="setRoute('products')">All products</button>
-
             </div>
         </div>
        
