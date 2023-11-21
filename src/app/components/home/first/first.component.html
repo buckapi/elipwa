@@ -13,7 +13,7 @@
                             <swiper [config]="config">
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide bethany-slider-item" *ngFor="let category of categories; let i = index" (click)="viewCategory(category)" style="cursor: pointer;">
-                                        <img class="bethany-slider-img" src="{{category.images[0]}}" alt="">
+                                        <img class="bethany-slider-img" src="{{category.images[0]}}" alt="" style="max-width: 100%; height: 700px;">
                                             <div class="bethany-slider-caption">
                                                 <div class="bethany-slider-subtitle"><a style="cursor: pointer;">{{ category.name }}</a></div>
                                                 <h4 style="cursor: pointer;" >View more</h4>

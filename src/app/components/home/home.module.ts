@@ -15,6 +15,7 @@ import { ProductsComponent } from './products/products.component';
 import { DetailProductsComponent } from './detail-products/detail-products.component';
 import { DetailPackagesComponent } from './detail-packages/detail-packages.component';
 import { PackagesComponent } from './packages/packages.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -27,7 +28,8 @@ import { PackagesComponent } from './packages/packages.component';
     ProductsComponent,
     DetailProductsComponent,
     DetailPackagesComponent,
-    PackagesComponent
+    PackagesComponent,
+    PortfolioComponent
   ],
   imports: [
     FormsModule,
