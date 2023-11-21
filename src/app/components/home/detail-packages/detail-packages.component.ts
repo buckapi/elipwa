@@ -28,8 +28,7 @@ export class DetailPackagesComponent implements OnInit {
   constructor(
     public yeoman: Yeoman,
     public restService: RestService,
-    public butler: Butler,
-    public forms: FormGroup
+    public butler: Butler
   ) {
     this.getAllPackages();
     this.getAllCategories();
