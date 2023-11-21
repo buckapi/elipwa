@@ -31,6 +31,7 @@ export class PackagesComponent implements OnInit {
    this.setRoute('detail-packages');
  }
   ngOnInit(): void {
+    window.scrollTo(0, 0);
   }
 
 }
