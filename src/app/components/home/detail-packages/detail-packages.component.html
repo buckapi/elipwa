@@ -6,7 +6,7 @@
                 <button class=""  (click)="setRoute('packages')">All packages</button>
             </div>
             <div class="col-md-12 mb-30">                 
-                <img *ngIf="yeoman.previewPackages.images[0]" src="{{yeoman.previewPackages.images[0]}}" alt=""> 
+                <img  src="{{yeoman.previewPackages.images[0]}}" alt=""> 
             </div>
         </div>
         <div class="row">
@@ -142,40 +142,39 @@
                         </div>
                         <div class="col-md-5 offset-md-1">
                             <h5 class="mb-30">We look forward to being in touch!</h5>
+                            
                             <form method="post" class="contact__form" action="">
-                                <!-- Form message -->
-                                <div class="row">
+                               
+                                <!-- <div class="row">
                                     <div class="col-12">
                                         <div class="alert alert-success contact__msg" style="display: none" role="alert">
                                             Your message was sent successfully.
                                         </div>
                                     </div>
-                                </div>
-                                <!-- Form elements -->
+                                </div> -->
                                 <div class="row">
                                     <div class="col-md-12 form-group">
-                                        <input name="name" type="text" placeholder="Full Name *" required> 
+                                        <input name="name" type="text" placeholder="Full Name *" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}"> 
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="email" type="email" placeholder="Email Address *" required> 
+                                        <input name="email" type="email" placeholder="Email Address *" [(ngModel)]="data.email" required [ngModelOptions]="{standalone: true}"> 
                                     </div>
                                     <div class="col-md-6 form-group">
-                                        <input name="phone" type="text" placeholder="Phone *" required> 
+                                        <input name="phone" type="tel" placeholder="Phone *" [(ngModel)]="data.phone" required [ngModelOptions]="{standalone: true}"> 
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <input name="subject" type="text" placeholder="Services Type *" required> 
+                                        <input name="subject" type="text" placeholder="Are you interested in makeup/hair service? *" [(ngModel)]="data.makeup" name="name" required  [ngModelOptions]="{standalone: true}"> 
                                     </div>
                                     <div class="col-md-12 form-group">
-                                        <input name="subject" type="text" placeholder="Are you interested in makeup/hair service? *" required> 
-                                    </div>
-                                    <div class="col-md-12 form-group">
-                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" required></textarea>
+                                        <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" [(ngModel)]="data.message" name="name" required  [ngModelOptions]="{standalone: true}"></textarea>
                                     </div>
                                     <div class="col-md-12">
-                                        <input name="submit" type="submit" value="Send Message">
+                                        <input name="submit" type="submit" value="Send Message" (click)="onSubmit()">
                                     </div>
+                                    
                                 </div>
                             </form>
+                              
                         </div>
                     </div>
                 </div>

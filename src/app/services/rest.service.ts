@@ -60,6 +60,7 @@ export class RestService {
 	products:any;
 	packages:any;
 	categories:any;
+	request:any;
 	url:any="https://db.buckapi.com:9032";
 	members:any;
 	private urlAPIEmail = 'https://pcwdfcc885.execute-api.us-east-2.amazonaws.com/api/test';
@@ -96,29 +97,7 @@ export class RestService {
 		this.transactions = this.http.get(url_api);
 		return ( this.http.get(url_api));		
 	}
-	//  charge(amount:any, buy_order:any){
-	// 	const headers = new HttpHeaders({
-	// 		'Content-Type': 'application/json',
-	// 		'Access-Control-Allow-Origin': '*',
-	// 		'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
-	// 		'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
-	// 	  });
-	//  	return this.http.post('https://www.zofricars.com/tbk/pay.php',{
-	// 		amount: amount,
-	//  		buy_order: buy_order
-	//  	},{headers}).toPromise();
 
-	//  }
-	// charge(amount: any, buy_order: any){
-	// 	const headers = new HttpHeaders({
-	// 		// 'Content-Type': 'application/json',
-	// 		'Content-Type': 'application/json',
-	// 		'Access-Control-Allow-Origin': 'https://app.zofricars.com',
-	// 		'Access-Control-Allow-Methods': 'GET, POST'
-	// 	});
-	// 	const url = `https://www.zofricars.com/tbk/integrator_webpay_rest_api.php?amount=${amount}&buy_order=${buy_order}`;
-	// 	return this.http.get(url).toPromise();
-	// }
 	getAllBranchs(){
 		const url_api = this.url+'/api/branchs';
 		return this.http.get(url_api);
@@ -184,6 +163,10 @@ export class RestService {
 	}
 	getAllPackages(){
 		const url_api = 	this.yeoman.origin.restUrl+'/api/packages';
+		return this.http.get(url_api);
+	}
+	getAllRequest(){
+		const url_api = 	this.yeoman.origin.restUrl+'/api/requests';
 		return this.http.get(url_api);
 	}
 
@@ -260,6 +243,14 @@ export class RestService {
 		.put<ProductInterface>(url_api, part)
 		.pipe(map(data => data));
 	}
+	requestUpdate(part :ProductInterface, id: string){
+		// let token = this.authService.getToken();
+		const url_api=	this.yeoman.origin.restUrl+`/api/requests/${id}`;
+		return this.http
+		.put<ProductInterface>(url_api, part)
+		.pipe(map(data => data));
+	}
+	
 	
 	
 
@@ -321,6 +312,12 @@ export class RestService {
 	}
 	savePackages(client :ProductInterface){
 		const url_api=	this.yeoman.origin.restUrl+'/api/packages';
+		return this.http
+		.post<ProductInterface>(url_api, client)
+		.pipe(map(data => data));
+	}
+	saveRequest(client :ProductInterface){
+		const url_api=	this.yeoman.origin.restUrl+'/api/requests';
 		return this.http
 		.post<ProductInterface>(url_api, client)
 		.pipe(map(data => data));
