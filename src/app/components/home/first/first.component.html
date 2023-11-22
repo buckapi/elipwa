@@ -206,7 +206,7 @@
                 <button class=""  (click)="setRoute('packages')">All Packages</button>
             </div>
 
-            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" [hidden]="i >= 5">
+            <div class="col-md-4" *ngFor="let packages of allPackages; let i = index" (click)="viewPackages(packages)" [hidden]="i >= 6">
                 <div class="services-item" >
                     <img class="services-img" src="{{packages.images[0]}}" alt="">
                         <div class="services-caption">

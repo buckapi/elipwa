@@ -90,6 +90,20 @@ color: darkgoldenrod;
   border: 1px solid #ccc;
 }
 
+.top2{
+ 
+    padding-top: 5%;
+
+}
+
+@media (max-width: 768px) {
+  .top2{
+ 
+    padding-top: 1%;
+
+}
+}
+
 
 
   

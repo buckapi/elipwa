@@ -5,32 +5,50 @@
             <div class="col-md-12" style="padding-bottom: 2%;">
                 <button class=""  (click)="setRoute('packages')">All packages</button>
             </div>
-            <div class="col-md-12 mb-30">                 
+            <div class="col-md-6 mb-30">                 
                 <img  src="{{yeoman.previewPackages.images[0]}}" alt=""> 
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6 top2">
                 <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
                 <h4>{{yeoman.previewPackages.name}}</h4>
                 <h4><strong class="">Price:</strong>$ {{yeoman.previewPackages.price}}</h4>
-            </div>
-        </div>
-        <div class="row mb-5">
-            <div class="col-md-12">
                 <p>{{yeoman.previewPackages.description}}</p>
-                
             </div>
+         
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-6">
+                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
+                <h4>{{yeoman.previewPackages.name}}</h4>
+                <h4><strong class="">Price:</strong>$ {{yeoman.previewPackages.price}}</h4>
+            </div> -->
+        </div>
+        <div class="row ">
+
             <div class="col-md-6">
                 <h5>Package Includes</h5>
-                <p><b>1.</b><strong class="">Quantity of photos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
-                <p><b>2.</b><strong class="">Number session:</strong> {{yeoman.previewPackages.numberSession}}</p>
-                <p><b>3.</b><strong class="">Duration:</strong> {{yeoman.previewPackages.duration}}</p>
-                <p><b>4.</b><strong class="">Photo session location</strong>{{yeoman.previewPackages.placeSession}}</p>
-                <p><b>5.</b><strong class="">Cloting </strong>{{yeoman.previewPackages.clothing}}</p>                
-                <p><b>6.</b><strong class="">Which includes: </strong>{{yeoman.previewPackages.includes}}</p>
-                <p><b>7.</b><strong class="">Notes:</strong> {{yeoman.previewPackages.note}}</p>
-               
+                <p><b>2.</b><strong class="">Number people:</strong> {{yeoman.previewPackages.numberPeople}}</p>
+                <p><b>3.</b><strong class="">Quantity of photos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
+                <p><b>4.</b><strong class="">Number session:</strong> {{yeoman.previewPackages.numberSession}}</p>
+                <p><b>5.</b><strong class="">Duration:</strong> {{yeoman.previewPackages.duration}}</p>
+                <b>6.</b> <strong class="">Photo session location:</strong>
+                <ul>
+                    <li *ngFor="let placeSession of yeoman.previewPackages.placeSessions">{{placeSession.place}}</li>
+                </ul>
+
+                <b>7.</b> <strong class="">Clothing and other items:</strong>
+                <ul>
+                    <li *ngFor="let clothing of yeoman.previewPackages.clothings">{{clothing.cloth}}</li>
+                </ul>
+
+                <b>8.</b> <strong class="">Which includes:</strong>
+                <ul>
+                    <li *ngFor="let include of yeoman.previewPackages.includes">{{include.inclu}}</li>
+                </ul>
+                <b>9.</b> <strong class="">Notes:</strong>
+                <ul>
+                    <li *ngFor="let note of yeoman.previewPackages.notes">{{note.not}}</li>
+                </ul>
             </div>
             <div class="col-md-6  faqs-accordion">
                 <div class="col-md-12 text-center">
