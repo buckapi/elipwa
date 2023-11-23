@@ -153,7 +153,7 @@
 </div>
 <!-- productos -->
 <div class="testimonials">
-    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/adolecente.jpg"> </div>
+    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/productos.jpg"> </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -163,6 +163,7 @@
                     
                 </div>
             </div>
+            
             <div class="row">
                 <div class="col-md-12">
                     <div class="testim">
@@ -173,7 +174,8 @@
                                         <div class="cont">
                                             <div class="img"> <img src="{{products.images[0]}}" alt=""> </div>
                                             <div class="info">
-                                                <h5>{{products.name}}</h5>  
+                                                <h4>{{products.name}}</h4> 
+                                                <h5>{{products.size}}</h5> 
                                                 <span (click)="viewProducts(products)">See now</span> 
                                             </div>
                                         </div>
@@ -184,13 +186,33 @@
                         
                     </div>
                    
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    
                 </div>
-            </div>
+            </div> 
            
         </div>
 </div>
+<!-- <div class="clients">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12  owl-theme" >
+               
+                    <swiper [config]="config3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide client-logo" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('products')">
+                                <a href=""><img src="{{products.images[0]}}" alt=""></a>
+                                <div class="info">
+                                    <h5>{{products.name}}</h5>  
+                                    <span (click)="viewProducts(products)">See now</span> 
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </swiper>
+            </div>
+        </div>
+    </div>
+</div> --> 
 <!-- Paquetes -->
 <div class="section-padding packages">
     <div class="container">
@@ -221,6 +243,7 @@
 
     </div>
 </div>
+<!--Albums-->
 <div class="section-padding" style="padding-top: 60px;">
     <div class="container">
         <div class="row">
@@ -281,24 +304,6 @@
     </div>
 </div>
 
-<!-- Albums -->
-<!-- <div class="clients">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12  owl-theme" >
-               
-                    <swiper [config]="config3">
-                        <div class="swiper-wrapper">
-                            <div class="swiper-slide client-logo" *ngFor="let albums of allAlbums; let i = index">
-                                <a href=""><img src="{{albums.images[0]}}" alt=""></a>
-                            </div>
-                            
-                        </div>
-                    </swiper>
-            </div>
-        </div>
-    </div>
-</div> -->
 
 
 

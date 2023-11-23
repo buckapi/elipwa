@@ -923,14 +923,14 @@ width: 100px;
   border: 2px solid rgba(248,244,243,1);
 }
 .testimonials .item .img img {
-  width: 70px;
-  height: 70px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center center;
-     object-position: center center;
-  border-radius: 50%;
-}
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+    /* border-radius: 50%; */
+  }
 .testimonials .item p {
   margin-top: 20px;
   color: #505050;

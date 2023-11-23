@@ -17,7 +17,7 @@
 }
 .signature3 {
     font-family: Signatie;
-    color: #fff;
+    color: #000;
 }
 .bg-1 {
     background: #d9ffff;
@@ -53,4 +53,22 @@ background: #f5f0ec;
 .gallery-img:hover img {
     transform: scale(1.1);
 }
+
+.testimonials .item .img img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center center;
+    object-position: center center;
+    /* border-radius: 50%; */
+  }
+  .testimonials .item .img {
+    width: 100%;
+    height: 70px;
+    border-radius: 50%;
+    display: contents;
+    position: relative;
+  }
+
 
