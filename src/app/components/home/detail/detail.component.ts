@@ -37,6 +37,7 @@ export class DetailComponent implements AfterViewInit {
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
+  window.scrollTo(0, 0);
   }
   viewPackages(packages:any){
     this.yeoman.previewPackages=packages;

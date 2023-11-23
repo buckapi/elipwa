@@ -12,8 +12,11 @@
                                     <!-- <h2>Bethany<span>Wedding & Event</span></h2> -->
                                 </a>
                                 <!-- Menu -->
+                                
                                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
-                                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <div  
+                                [ngClass]="menuExpandido ? 'collapse navbar-collapse show' : 'collapse navbar-collapse'" 
+                                id="navbarSupportedContent">
                                     <ul class="navbar-nav ml-auto py-4 py-md-0">
                                         <li class="nav-item"> <a class="nav-link" (click)="setRoute('first')" style="cursor: pointer;">Home</a></li>
                                         <li class="nav-item"> <a class="nav-link" (click)="setRoute('about')" style="cursor: pointer;" title="about">About</a></li>

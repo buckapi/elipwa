@@ -65,6 +65,9 @@ config2: SwiperOptions = {
   setRoute(par:any){
     let parametro=par;
     this.yeoman.virtualRoute=parametro;
+
+    window.scrollTo(0, 0);
+    
   }
   view(category:any){
     this.yeoman.preview=category;

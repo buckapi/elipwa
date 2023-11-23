@@ -34,6 +34,7 @@ export class DetailPackagesComponent implements OnInit {
       }
     }
   };
+  faqShow=0;
   allAlbums:any;
   allPackages:any;
   faq:any;
@@ -66,6 +67,7 @@ export class DetailPackagesComponent implements OnInit {
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
+  window.scrollTo(0, 0);
   }
  
  getAllCategories(){
@@ -78,7 +80,9 @@ export class DetailPackagesComponent implements OnInit {
       this.data.idCategory = "c"+category.id;
       console.log(category.id);
     }
-    
+    checkVisibility(i:any){
+this.faqShow=i;
+    }
   setCategory(category:any){
       let index=category;
       console.log("seleccionada: "+this.yeoman.allcategory[index].name);

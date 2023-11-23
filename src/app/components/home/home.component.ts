@@ -53,13 +53,19 @@ export class HomeComponent implements AfterViewInit {
   
          
   }
+  setRoute(par:any){
+    let parametro=par;
+  this.yeoman.virtualRoute=parametro;
+
+  window.scrollTo(0, 0);
+  }
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   } 
   ngOnInit(): void {
-    setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 0);
+  //   setTimeout(() => {
+  //   window.scrollTo(0, 0);
+  // }, 0);
   }
   
 

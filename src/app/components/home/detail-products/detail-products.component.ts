@@ -28,6 +28,7 @@ export class DetailProductsComponent implements OnInit {
    setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
+  window.scrollTo(0, 0);
   }
   onSubmit(){
     

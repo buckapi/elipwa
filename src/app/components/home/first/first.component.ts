@@ -133,6 +133,8 @@ export class FirstComponent implements AfterViewInit {
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
+
+  window.scrollTo(0, 0);
   }
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);

@@ -55,13 +55,13 @@
                     <h2 class="signature1">F.A.Qs</h2>
                     <hr class="line line-hr-center">
                 </div>
-                <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs">
+                <div class="accordion" *ngFor="let faq of yeoman.previewPackages.faqs;let i =index">
                     <div class="item" >
-                        <div class="title">
+                        <div class="title" (click)="checkVisibility(i)">
                             <h6>¿{{faq.p}}?</h6>
                         </div>
-                        <div class="accordion-info active" style="display: none;">
-                            <p>{{faq.r}}</p>
+                        <div *ngIf="faqShow === i" class="accordion-info active">
+                            <p>{{ faq.r }}</p>
                         </div>
                     </div>
                     <!-- <div class="item">

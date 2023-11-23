@@ -7,7 +7,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled'  // Habilita la restauración de la posición de desplazamiento
+    }
+    )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
