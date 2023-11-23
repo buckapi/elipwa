@@ -130,7 +130,7 @@
             <div class="col-md-5 offset-1">
                 <div class="about-img">
                     <div class="img">
-                        <img src="assets/assetsEli/images/about.jpg" alt="">
+                        <img src="assets/assetsEli/images/team/02.jpg" alt="">
                     </div>
                     <div class="about-img-2">Eli Quintalla</div>
                 </div>
@@ -221,57 +221,29 @@
 
     </div>
 </div>
-<!-- Productos -->
-<!--  <div class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Our Products</h2>
-                <hr class="line line-hr-center">
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('shop')" [hidden]="i > 5">
-                <div class="services-item" >
-                    <img class="services-img" src="{{products.images[0]}}" alt="">
-                        <div class="services-caption">
-                            <div class="services-subtitle"><a href="services-page.html">{{products.name}}</a></div>
-                                <div class="services-title"><a href="services-page.html">{{products.price}}</a></div>
-                        </div>
-                </div>
-            </div>
-         
-        </div>
-    </div>
-</div>  -->
-<!-- galery -->
-<!-- Albums -->
 <div class="section-padding" style="padding-top: 60px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
                 <h2 class="signature1">Albums</h2>
                 <hr class="line line-hr-center">
-                <h3 class="signature2">Instantáneas de Momentos Inolvidables</h3>
+                <h3 class="signature2">Instantáneas de momentos inolvidables</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 gallery-item" *ngFor="let albums of allAlbums; let i = index" (click)="viewPackages(albums)" [hidden]="i > 6">
-                <a href="{{albums.images[0]}}" title="" class="img-zoom">
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
+                <a href="{{album.images[0]}}" class="img-zoom">
                     <div class="gallery-box">
-                        <div class="gallery-img"> <img src="{{albums.images[0]}}" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-img">
+                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
+                        </div>
                         <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
                 </a>
             </div>
-            <!-- <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/2.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/2.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
+            
+            
+            <!-- 
             <div class="col-md-4 gallery-item">
                 <a href="assets/assetsEli/images/gallery/3.jpg" title="" class="img-zoom">
                     <div class="gallery-box">
@@ -309,74 +281,28 @@
     </div>
 </div>
 
-<!-- <div class="section-padding bg-1">
+<!-- Albums -->
+<!-- <div class="clients">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 text-center">
-                <h2 class="signature1">Albums</h2>
-                <hr class="line line-hr-center">
-            </div>
-        </div>
-        <div class="row">
-            
-            <div class="col-md-6">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/12.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/13.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/14.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
+            <div class="col-md-12  owl-theme" >
+               
+                    <swiper [config]="config3">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide client-logo" *ngFor="let albums of allAlbums; let i = index">
+                                <a href=""><img src="{{albums.images[0]}}" alt=""></a>
+                            </div>
+                            
+                        </div>
+                    </swiper>
             </div>
         </div>
     </div>
 </div> -->
+
+
+
+
+
 
 

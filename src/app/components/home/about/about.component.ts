@@ -16,9 +16,14 @@ export class AboutComponent implements OnInit {
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
   }
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
 
   ngOnInit(): void {
+    setTimeout(() => {
     window.scrollTo(0, 0);
+  }, 0);
   }
 
 }

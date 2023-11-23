@@ -2,9 +2,8 @@
     position:fixed;
     width:45px;
     height:45px;
-        bottom: 66px;
-      right: 15px;
-  
+    bottom: 80px;
+    right: 15px;  
     background-color:#25d366;
     color:#fff;
     border-radius:50%;
@@ -16,3 +15,51 @@
   .whatsapp-icon {
     margin-top:15px;
   }
+
+  .totop {
+    height: 9px;
+    opacity: 0;
+    position: fixed;
+    right: -60px;
+    width: 49px;
+    z-index: 999;
+    display: block;
+    top: 93%;
+    background-repeat: no-repeat;
+    background-position: center 15px;
+    background-color: #a2783a;
+    font-size: 10px;
+    line-height: 1;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+    font-family: Nunito Sans, sans-serif;
+    text-align: center;
+    border-radius: 50%;
+    padding: 28px 0 21px 0;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.totop-vissible {
+    right: 10px;
+    opacity: 1;
+}
+.totop:before {
+    position: absolute;
+    content: "\e627";
+    top: 10px;
+    left: 50%;
+    margin-left: -6px;
+    font-size: 11px;
+    display: inline-block;
+    font-family: "themify";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+}
+.totop:hover {
+    color: #fff;
+}
+.totop:focus {
+    color: #fff;
+}

@@ -55,6 +55,7 @@ export class Yeoman {
   allCategoriesSize:number=0;
   products:any={};
   package:any={};
+  albums:any={};
   allAlbums:any=[];
   allPackages:any=[];
   allProducts:any=[];

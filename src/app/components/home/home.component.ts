@@ -12,7 +12,20 @@ import * as $ from 'jquery';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements AfterViewInit {
-
+  config: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 4,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+  }; 
   constructor(
     public restService:RestService,
     public script:ScriptService,
@@ -37,30 +50,17 @@ export class HomeComponent implements AfterViewInit {
           })
           .catch(error => console.log(error));  
                   
-    this.restService.getAllProducts().subscribe((response:any) => {
-    console.log(response);
-    this.yeoman.products=response;
-  }) ;   4
+  
          
   }
-  config: SwiperOptions = {
-    a11y: { enabled: true },
-    direction: 'horizontal',
-    slidesPerView: 4,
-    keyboard: true,
-    mousewheel: false,
-    scrollbar: false,
-    pagination: true,
-    spaceBetween: 5,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev'
-    },
-  };  
-
-
   ngAfterViewInit(): void {
-
+    window.scrollTo(0, 0);
   } 
+  ngOnInit(): void {
+    setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
+  }
+  
 
 }

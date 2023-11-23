@@ -3,7 +3,7 @@ import { Butler } from '@app/services/butler.services';
 import { RestService } from '@app/services/rest.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import Swal from 'sweetalert2'
-import { FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { SwiperOptions } from 'swiper';
 @Component({
   selector: 'app-detail-packages',
   templateUrl: './detail-packages.component.html',
@@ -11,6 +11,30 @@ import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 })
 
 export class DetailPackagesComponent implements OnInit {
+  config3: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 2,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 2000, 
+      disableOnInteraction: false, 
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4
+      }
+    }
+  };
+  allAlbums:any;
   allPackages:any;
   faq:any;
   categorySeted:boolean=false;
@@ -32,6 +56,7 @@ export class DetailPackagesComponent implements OnInit {
   ) {
     this.getAllPackages();
     this.getAllCategories();
+    this.getAllAlbums();
    }
   getAllPackages(){
     this.restService.getAllPackages().subscribe(response=>{
@@ -63,6 +88,12 @@ export class DetailPackagesComponent implements OnInit {
       console.log("id: "+JSON.stringify(this.data.idCategory));
       }
     }
+    getAllAlbums(){
+      this.restService.getAllAlbums().subscribe(response => {
+        this.allAlbums = response;
+        console.log('Álbumes cargados:', this.allAlbums);
+      });
+    }
   
   onSubmit(){
     
@@ -82,13 +113,22 @@ export class DetailPackagesComponent implements OnInit {
       console.log(this.data);
       
       }
+      viewPackages(packages:any){
+        this.yeoman.previewPackages=packages;
+        this.setRoute('detail-packages');
+      }
       
  /*  toggleAccordion(faq) {
     faq.isActive = !faq.isActive;
   } */
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   
   ngOnInit(): void {
+    setTimeout(() => {
     window.scrollTo(0, 0);
+  }, 0);
   }
 
 }

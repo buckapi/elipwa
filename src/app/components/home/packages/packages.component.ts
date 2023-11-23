@@ -30,8 +30,13 @@ export class PackagesComponent implements OnInit {
    this.yeoman.previewPackages=packages;
    this.setRoute('detail-packages');
  }
-  ngOnInit(): void {
-    window.scrollTo(0, 0);
-  }
+ ngAfterViewInit(): void {
+  window.scrollTo(0, 0);
+}
+ngOnInit(): void {
+  setTimeout(() => {
+  window.scrollTo(0, 0);
+}, 0);
+}
 
 }

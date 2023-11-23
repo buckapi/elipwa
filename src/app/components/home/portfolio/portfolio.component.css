@@ -1,0 +1,56 @@
+
+.testimonials .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0px;
+    width: 100%;
+    z-index: -1;
+}
+.signature1 {
+    font-family: Signatie;
+    color: darkgoldenrod;
+}
+.signature2{
+    font-family: Signatie;
+    color: #000;
+}
+.signature3 {
+    font-family: Signatie;
+    color: #fff;
+}
+.bg-1 {
+    background: #d9ffff;
+}
+.about{
+background: #f5f0ec;
+}
+.packages{
+    background: #f5f0ec;
+}
+.botonAll{
+    text-align: end;
+    padding-bottom: 30px;
+}
+.bethany-slider-img {
+    max-width: 100%;
+    height: 700px;
+}
+@media screen and (max-width: 768px) {
+    .bethany-slider-img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+.gallery-img {
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+    transform: scale(1.1);
+}
+

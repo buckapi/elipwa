@@ -8,31 +8,39 @@
     </div>
 </div>
 <!-- Photo Gallery -->
-<div class="section-padding">
+<div class="section-padding" style="padding-top: 60px;">
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2>Photo Gallery</h2>
+                <h2 class="signature1">Albums</h2>
                 <hr class="line line-hr-center">
+                <h3 class="signature2">Instantáneas de momentos inolvidables</h3>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/1.jpg" title="" class="img-zoom">
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
+                <a href="{{album.images[0]}}" class="img-zoom">
                     <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/1.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-img">
+                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
+                        </div>
                         <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
                 </a>
             </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/2.jpg" title="" class="img-zoom">
+           <!--  <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
+                <a href="#modal" (click)="open(album.images[0])">
                     <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/2.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
+                        <div class="gallery-img">
+                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
+                        </div>
                         <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
                 </a>
-            </div>
+            </div> -->
+            
+            
+            <!-- 
             <div class="col-md-4 gallery-item">
                 <a href="assets/assetsEli/images/gallery/3.jpg" title="" class="img-zoom">
                     <div class="gallery-box">
@@ -64,31 +72,8 @@
                         <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
                 </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/7.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/7.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/8.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/8.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/6.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/6.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
+            </div> -->
+        
         </div>
     </div>
 </div>

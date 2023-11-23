@@ -28,8 +28,13 @@ export class ProductsComponent implements OnInit {
     this.yeoman.previewProducts=products;
     this.setRoute('detail-products');
   }
+  ngAfterViewInit(): void {
+    window.scrollTo(0, 0);
+  }
   ngOnInit(): void {
-      window.scrollTo(0, 0);
+    setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
   }
 
 }

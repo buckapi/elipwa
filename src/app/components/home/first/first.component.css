@@ -42,3 +42,15 @@ background: #f5f0ec;
         height: auto;
     }
 }
+.gallery-img {
+    overflow: hidden;
+}
+
+.gallery-img img {
+    transition: transform 0.5s ease;
+}
+
+.gallery-img:hover img {
+    transform: scale(1.1);
+}
+

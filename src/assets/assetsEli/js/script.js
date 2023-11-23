@@ -294,4 +294,46 @@
         .done(done_func)
         .fail(fail_func);
     });
+
+    function filterSelection(category) {
+        var items, i;
+        items = document.getElementsByClassName('gallery-item');
+        
+        if (category === 'all') category = '';
+    
+        // Iterar sobre todos los elementos y ocultar aquellos que no coincidan con la categoría seleccionada
+        for (i = 0; i < items.length; i++) {
+            removeClass(items[i], 'show');
+            if (items[i].className.indexOf(category) > -1) addClass(items[i], 'show');
+        }
+    }
+    
+    function addClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) === -1) {
+                element.className += " " + arr2[i];
+            }
+        }
+    }
+    
+    function removeClass(element, name) {
+        var i, arr1, arr2;
+        arr1 = element.className.split(" ");
+        arr2 = name.split(" ");
+        for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+                arr1.splice(arr1.indexOf(arr2[i]), 1);
+            }
+        }
+        element.className = arr1.join(" ");
+    }
+    
+    // Muestra inicialmente todos los ítems
+    window.onload = function() {
+        filterSelection('all');
+    }
+    
     

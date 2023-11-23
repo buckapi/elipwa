@@ -8,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ContactComponent implements OnInit {
 
   constructor() { }
-
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     window.scrollTo(0, 0);
+  }
+  ngOnInit(): void {
+    setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
   }
 
 }

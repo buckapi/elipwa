@@ -90,12 +90,15 @@ viewCategory(category:any){
   this.yeoman.previewCategory=category;
   this.setRoute('detail');
 }
-ngOnInit(): void {
-  window.scrollTo(0, 0);
-}
+
 
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
+  }
+  ngOnInit(): void {
+    setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
   }
  
 

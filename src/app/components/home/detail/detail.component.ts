@@ -43,8 +43,13 @@ export class DetailComponent implements AfterViewInit {
     this.setRoute('detail');
   }
   ngAfterViewInit(): void {
-    // this.cdr.detectChanges();
+   this.cdr.detectChanges();
     window.scrollTo(0, 0);
+  }
+  ngOnInit(): void {
+    setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 0);
   }
  
 

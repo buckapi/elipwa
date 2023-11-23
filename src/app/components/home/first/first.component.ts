@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { Yeoman } from '@app/services/yeoman.service';
 import { SwiperOptions } from 'swiper';
 import { RestService } from '@app/services/rest.service';
@@ -61,6 +61,29 @@ export class FirstComponent implements AfterViewInit {
       }
     }
   };
+  config3: SwiperOptions = {
+    a11y: { enabled: true },
+    direction: 'horizontal',
+    slidesPerView: 2,
+    keyboard: true,
+    mousewheel: false,
+    scrollbar: false,
+    pagination: true,
+    spaceBetween: 5,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+    autoplay: {
+      delay: 2000, 
+      disableOnInteraction: false, 
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 4
+      }
+    }
+  };
   constructor(
     public yeoman:Yeoman,
     public restService:RestService,
@@ -70,6 +93,7 @@ export class FirstComponent implements AfterViewInit {
     this.loadCategories();
     this.getAllPackages();
     this.getAllProducts();
+    this.getAllAlbums();
    }
    loadCategories(){
     this.restService.getAllCategory().subscribe(response=>{
@@ -86,6 +110,14 @@ export class FirstComponent implements AfterViewInit {
       this.allProducts=response;
     });
   }
+ 
+  getAllAlbums(){
+    this.restService.getAllAlbums().subscribe(response => {
+      this.allAlbums = response;
+     
+    });
+  }
+  
   viewCategory(category:any){
     this.yeoman.previewCategory=category;
     this.setRoute('detail');
@@ -104,6 +136,11 @@ export class FirstComponent implements AfterViewInit {
   }
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
+  }
+  ngOnInit(): void {
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 0);
   }
 
 }
