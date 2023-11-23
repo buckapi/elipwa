@@ -18,62 +18,18 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
-                <a href="{{album.images[0]}}" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img">
-                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
-                        </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(album)" [hidden]="i >= 6">
+                <div class="gallery-box">
+                    <div class="gallery-img">
+                        <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
                     </div>
-                </a>
+                    <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                </div>
             </div>
-           <!--  <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
-                <a href="#modal" (click)="open(album.images[0])">
-                    <div class="gallery-box">
-                        <div class="gallery-img">
-                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
-                        </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div> -->
+          
             
             
-            <!-- 
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/3.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/3.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/4.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/4.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/5.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/5.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col-md-4 gallery-item">
-                <a href="assets/assetsEli/images/gallery/9.jpg" title="" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img"> <img src="assets/assetsEli/images/gallery/9.jpg" class="img-fluid mx-auto d-block" alt=""> </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div> -->
-        
+           
         </div>
     </div>
 </div>

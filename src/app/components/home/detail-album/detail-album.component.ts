@@ -13,6 +13,16 @@ export class DetailAlbumComponent implements OnInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   allAlbums:any;
+  albums:any;
+  data = {
+    images: [
+      {}
+    ],
+    name: '',
+    description:'',
+    ref: '',
+     idCategory: '',
+  };
   constructor(
     public yeoman:Yeoman,
     public restService: RestService
@@ -23,7 +33,7 @@ export class DetailAlbumComponent implements OnInit {
 
   window.scrollTo(0, 0);
   }
-  getAllAlbums(){
+ getAllAlbums(){
     this.restService.getAllAlbums().subscribe(response => {
       this.allAlbums = response;
       if(this.allAlbums[0]!=undefined){
@@ -38,7 +48,7 @@ export class DetailAlbumComponent implements OnInit {
         }
       }
     });
-  }
+  } 
   ngOnInit(): void {
     this.galleryOptions = [
       {

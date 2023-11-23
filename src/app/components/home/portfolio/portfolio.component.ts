@@ -13,7 +13,6 @@ export class PortfolioComponent implements OnInit {
   constructor(
     public yeoman: Yeoman,
     public restService: RestService,
-    private modalService: NgbModal
   ) { 
     this.getAllAlbums();
   }
@@ -23,10 +22,17 @@ export class PortfolioComponent implements OnInit {
       console.log('Álbumes cargados:', this.allAlbums);
     });
   }
-/*   open(imageSrc: string) {
-    const modalRef = this.modalService.open(NgbModalContent);
-    modalRef.componentInstance.imageSrc = imageSrc;
-} */
+  viewAlbums(albums:any){
+    this.yeoman.previewAlbums=albums;
+    this.setRoute('detail-album');
+  }
+  setRoute(par:any){
+    let parametro=par;
+  this.yeoman.virtualRoute=parametro;
+
+  window.scrollTo(0, 0);
+  }
+
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }

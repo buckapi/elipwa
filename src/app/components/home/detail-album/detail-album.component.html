@@ -2,10 +2,16 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-               <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
+    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
+</div>            
+</div>
+            </div>
+    <div class="container" *ngIf="yeoman.previewAlbums!==undefined">
+        <div class="row">
+            <div class="col-md-12">
 
-<!--                 <img src="assets/assetsEli/images/blog/a.jpg" class="img-responsive" alt="">
- -->            </div>
+               <img src="{{yeoman.previewAlbums.images[0]}}" class="img-responsive" alt="">
+             </div>
         </div>
         <div class="row">
             <div class="col-md-12 mt-5">
