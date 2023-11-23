@@ -16,9 +16,9 @@
                 <h5 ><strong class="">Description:</strong>  {{yeoman.previewProducts.description}}</h5>
                 <h5><strong class="">Price:  </strong>$ {{yeoman.previewProducts.price}}</h5>
                <!--  <button class=""  (click)="setRoute('products')">Apply now</button> -->
-                <button class="" (click)="scrollToForm()">Apply now</button>
-
+                <button class="" (click)="scrollToForm()">Apply now</button> 
                 <hr class="line line-hr-center">
+                <button (click)="openWhatsApp()" class="">Request</button>
             </div>
             <div class="col-md-12 offset-md-1"  *ngIf="showForm" id="applicationForm" >
                 <h5 class="mb-30">Are you interested in this product? select the size that suits what you want</h5>

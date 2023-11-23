@@ -57,7 +57,10 @@ export class DetailProductsComponent implements OnInit {
         }
       }, 100); // Un pequeño retraso para asegurar que el formulario sea visible
     }
-    
+    openWhatsApp() {
+      window.open('https://wa.me/14108555095?text=Hola%20Eli-Fotografía,%20quisiera%20pedir%20una%20cita%20de%20fotografía.');
+    }
+
   ngAfterViewInit(): void {
     window.scrollTo(0, 0);
   }
