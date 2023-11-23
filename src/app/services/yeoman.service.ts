@@ -49,6 +49,15 @@ export class Yeoman {
   ref: '',
    idCategory: '',
 };
+previewAlbums:any={
+  images: [
+    {}
+  ],
+  name: '',
+  description:'',
+  ref: '',
+   idCategory: '',
+};
   preview:any={};
   categories:any={};
   allcategory:any=[];

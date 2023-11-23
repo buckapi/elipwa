@@ -10,6 +10,10 @@ import { MenuComponent } from './shared/menu/menu.component';
 import { HdrComponent } from './shared/hdr/hdr.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +23,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HdrComponent
   ],
   imports: [
+    BrowserAnimationsModule,
+    NgxGalleryModule,
     HttpClientModule,
     NgxUsefulSwiperModule,
     BrowserModule,

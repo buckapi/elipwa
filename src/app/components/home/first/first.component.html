@@ -253,8 +253,20 @@
                 <h3 class="signature2">Instantáneas de momentos inolvidables</h3>
             </div>
         </div>
+          
         <div class="row">
-            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index">
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(allAlbums)">
+                <div class="gallery-box">
+                    <div class="gallery-img">
+                        <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
+                    </div>
+                    <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
+                </div>
+            </div>
+            
+<!--             <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
+ -->        
+            <!-- <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(allAlbums)">
                 <a href="{{album.images[0]}}" class="img-zoom">
                     <div class="gallery-box">
                         <div class="gallery-img">
@@ -263,8 +275,8 @@
                         <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                     </div>
                 </a>
-            </div>
-            
+            </div> -->
+             
             
             <!-- 
             <div class="col-md-4 gallery-item">

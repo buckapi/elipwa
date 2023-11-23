@@ -16,6 +16,11 @@ import { DetailProductsComponent } from './detail-products/detail-products.compo
 import { DetailPackagesComponent } from './detail-packages/detail-packages.component';
 import { PackagesComponent } from './packages/packages.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+
+import { NgxGalleryModule } from '@kolkov/ngx-gallery';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { DetailAlbumComponent } from './detail-album/detail-album.component';
+
 @NgModule({
   declarations: [
     HomeComponent,
@@ -29,10 +34,12 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     DetailProductsComponent,
     DetailPackagesComponent,
     PackagesComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    DetailAlbumComponent
   ],
   imports: [
     FormsModule,
+    NgxGalleryModule,
     ReactiveFormsModule,
     NgxUsefulSwiperModule,
     CommonModule,

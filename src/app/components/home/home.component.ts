@@ -5,6 +5,7 @@ import { Yeoman } from '@app/services/yeoman.service';
 import { HttpClient } from '@angular/common/http';
 import { RestService } from '@app/services/rest.service';
 import { SwiperOptions } from 'swiper';
+
 import * as $ from 'jquery';
 @Component({
   selector: 'app-home',
