@@ -9,6 +9,7 @@ import {NgxGalleryImage} from '@kolkov/ngx-gallery';
 import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
 
 import { trigger, state, style, animate, transition } from '@angular/animations';
+import { previewAlbum } from '@app/services/previewAlbum.service';
 @Component({
   selector: 'app-first',
   templateUrl: './first.component.html',
@@ -100,7 +101,8 @@ export class FirstComponent implements AfterViewInit {
   constructor(
     public yeoman:Yeoman,
     public restService:RestService,
-    public router: Router
+    public router: Router,
+    public previewAlbum: previewAlbum,
   ) 
   {
     
@@ -154,8 +156,13 @@ export class FirstComponent implements AfterViewInit {
     this.yeoman.previewProducts=products;
     this.setRoute('detail-products');
   }
-  viewAlbums(albums:any){
-    this.yeoman.previewAlbums=albums;
+  viewAlbums(i:any){
+    this.yeoman.previewAlbums=this.allAlbums[i];
+
+    this.previewAlbum.album=[];
+    this.previewAlbum.album=this.allAlbums[i];
+    this.previewAlbum.i=i;
+    console.log(this.previewAlbum.album)
     this.setRoute('detail-album');
   }
   setRoute(par:any){

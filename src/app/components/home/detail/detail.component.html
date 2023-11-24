@@ -14,7 +14,12 @@
                 <p><strong>{{yeoman.previewCategory.description1}}</strong></p>
                 <p>{{yeoman.previewCategory.description2}}</p>
                 <p><strong>{{yeoman.previewCategory.description3}}</strong></p>
+               
+                <ul>
+                    <li *ngFor="let itemService of yeoman.previewCategory.itemServices">{{itemService.item}}</li>
+                </ul>
                 <button class=""  (click)="setRoute('packages')">View packages</button>
+
             </div>
            
         </div>

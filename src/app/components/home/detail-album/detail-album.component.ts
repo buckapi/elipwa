@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,AfterViewInit } from '@angular/core';
+import { previewAlbum } from '@app/services/previewAlbum.service';
 import { RestService } from '@app/services/rest.service';
 import { Yeoman } from '@app/services/yeoman.service';
 import {NgxGalleryOptions} from '@kolkov/ngx-gallery';
@@ -9,7 +10,7 @@ import {NgxGalleryAnimation} from '@kolkov/ngx-gallery';
   templateUrl: './detail-album.component.html',
   styleUrls: ['./detail-album.component.css']
 })
-export class DetailAlbumComponent implements OnInit {
+export class DetailAlbumComponent implements OnInit,AfterViewInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   allAlbums:any;
@@ -25,31 +26,46 @@ export class DetailAlbumComponent implements OnInit {
   };
   constructor(
     public yeoman:Yeoman,
-    public restService: RestService
-  ) { }
+    public restService: RestService,
+    public previewAlbum:previewAlbum
+  ) { 
+this.getAllAlbums()
+  }
   setRoute(par:any){
     let parametro=par;
   this.yeoman.virtualRoute=parametro;
 
   window.scrollTo(0, 0);
   }
- getAllAlbums(){
+  getAllAlbums() {
+    console.log("Peticiones de álbumes");
     this.restService.getAllAlbums().subscribe(response => {
       this.allAlbums = response;
-      if(this.allAlbums[0]!=undefined){
-        let size = this.allAlbums.length;
-        for(let i = 0;i<size;i++ ){
-          console.log(this.allAlbums[i])
+      console.log("Respuesta", response);
+  this.allAlbums=response;
+  let size= this.getAllAlbums.length;
+      if (response != undefined && this.previewAlbum.i < size) {
+        // Asegúrate de que 'i' está definido y es un índice válido
+        const albumImages = this.allAlbums[this.previewAlbum.i].images;
+        for (let i = 0; i < albumImages.length; i++) {
+          console.log("Imagen", albumImages[i]);
           this.galleryImages.push({
-            small: ''+this.allAlbums[i].images[0],
-            medium: ''+this.allAlbums[i].images[0],
-            big: ''+this.allAlbums[i].images[0]
-          })
+            small: albumImages[i],
+            medium: albumImages[i],
+            big: albumImages[i]
+          });
         }
       }
     });
-  } 
+  }
+  
+  ngAfterViewInit(): void {
+    // console.log("holaaa",JSON.stringify(this.previewAlbum))
+this.getAllAlbums()
+   
+  }
   ngOnInit(): void {
+    this.getAllAlbums()
     this.galleryOptions = [
       {
         width: '50%',
@@ -111,7 +127,17 @@ export class DetailAlbumComponent implements OnInit {
       }
     ];
     this.galleryImages = [
+
     ];
+    // for(let i = 0; i < this.previewAlbum.album.length; i++ ){
+    //   console.log(this.previewAlbum.album[i])
+    //   this.galleryImages.push({
+    //     small: '' + this.previewAlbum.album[i],
+    //     medium: '' + this.previewAlbum.album[i],
+    //     big: '' + this.previewAlbum.album[i]
+    //   })
+    // }
+    
   }
 
 }

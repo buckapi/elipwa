@@ -255,7 +255,7 @@
         </div>
           
         <div class="row">
-            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(album)" [hidden]="i >= 6">
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(i)" [hidden]="i >= 6">
                 <div class="gallery-box">
                     <div class="gallery-img">
                         <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">

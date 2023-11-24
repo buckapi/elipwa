@@ -17,6 +17,7 @@ export class Yeoman {
     description2: "",
     description3: "",
     ref:"",
+    itemServices: [{item:'' }]
   };
   previewPackages:any={
     images: [
