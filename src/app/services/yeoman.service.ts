@@ -59,6 +59,7 @@ previewAlbums:any={
   ref: '',
    idCategory: '',
 };
+  filteredPackages:any=[];
   preview:any={};
   categories:any={};
   allcategory:any=[];

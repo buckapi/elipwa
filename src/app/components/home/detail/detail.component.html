@@ -2,7 +2,7 @@
     <div class="container" *ngIf="yeoman.previewCategory!==undefined" >
         <div class="row">
             <div class="col-md-12" style="padding-bottom: 2%;">
-                <button class=""  (click)="setRoute('shop')">All services</button>
+                <button class=""  (click)="setRoute('shop')">Todos los servicios</button>
             </div>
             <div class="col-md-6 mb-30" > 
                 <img *ngIf="yeoman.previewCategory.images[0]" src="{{yeoman.previewCategory.images[0]}}" alt=""> 
@@ -18,10 +18,35 @@
                 <ul>
                     <li *ngFor="let itemService of yeoman.previewCategory.itemServices">{{itemService.item}}</li>
                 </ul>
-                <button class=""  (click)="setRoute('packages')">View packages</button>
+                <button class=""  (click)="setRoute('packages')">Ver  paquetes</button>
 
             </div>
            
+        </div>
+        <div class="section-padding"  >
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2 class="signature1" style="color: darkgoldenrod;">Paquetes</h2>
+                        <hr class="line line-hr-center">
+                      </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-4" *ngFor="let packages of yeoman.filteredPackages; let i = index" (click)="viewPackages(i)" >
+                        <div class="services-item" >
+                            <img class="services-img" src="{{packages.images[0]}}" alt="">
+                                <div class="services-caption">
+                                    <div class="services-title"><a >Ver detalles</a></div>
+                                </div>
+                        </div>
+        <!--                 <div class=""><a >{{packages.idCategory}}</a></div>
+         -->                <div class="services-subtitle" style="text-align: center;"><a >{{packages.name}}</a></div>
+                        <div class="services-title" style="text-align: center;"><a >$ {{packages.price}}</a></div>
+                    </div>
+                 
+                </div> 
+            </div>
         </div>
        <!--  <div class="container" style=" padding-top: 30px;"> 
         <div class="row">

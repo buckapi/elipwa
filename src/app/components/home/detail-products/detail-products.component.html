@@ -4,7 +4,7 @@
     <div class="container" *ngIf="yeoman.previewProducts!==undefined" >
         <div class="row">
             <div class="col-md-12" style="padding-bottom: 2%;">
-                <button class=""  (click)="setRoute('products')">All products</button>
+                <button class=""  (click)="setRoute('products')">Todos los productos</button>
             </div>
             <div class="col-md-6 mb-30" > 
                 <img  src="{{yeoman.previewProducts.images[0]}}" alt=""> </div>
@@ -12,14 +12,14 @@
             <div class="col-md-6">
                 <h3 class=""><strong> {{yeoman.previewProducts.name}}</strong></h3>
                 <hr class="line line-hr-left">
-                <h5 ><strong class="">Sizes:</strong>  {{yeoman.previewProducts.size}}</h5>
-                <h5 ><strong class="">Description:</strong>  {{yeoman.previewProducts.description}}</h5>
-                <button class="" (click)="scrollToForm()">Apply now</button> 
+                <h5 > {{yeoman.previewProducts.size}}</h5>
+                <h5 ><strong class="">Descripción:</strong>  {{yeoman.previewProducts.description}}</h5>
+                <button class="" (click)="scrollToForm()">Aplicar ahora</button> 
                 <hr class="line line-hr-center">
-                <button (click)="openWhatsApp()" class="">Request</button>
+                <button (click)="openWhatsApp()" class="">Solicitar</button>
             </div>
             <div class="col-md-12 offset-md-1"  *ngIf="showForm" id="applicationForm" >
-                <h5 class="mb-30">Are you interested in this product? select the size that suits what you want</h5>
+                <h5 class="mb-30">¿Está interesado en este producto? Llena el formulario</h5>
                 
                 <form method="post" class="contact__form" action="">
                    
@@ -32,22 +32,22 @@
                     </div> -->
                     <div class="row">
                         <div class="col-md-12 form-group">
-                            <input name="name" type="text" placeholder="Full Name *" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}"> 
+                            <input name="name" type="text" placeholder="Nombre completo*" [(ngModel)]="data.name" name="name" required  [ngModelOptions]="{standalone: true}"> 
                         </div>
                         <div class="col-md-6 form-group">
-                            <input name="email" type="email" placeholder="Email Address *" [(ngModel)]="data.email" required [ngModelOptions]="{standalone: true}"> 
+                            <input name="email" type="email" placeholder="Correo*" [(ngModel)]="data.email" required [ngModelOptions]="{standalone: true}"> 
                         </div>
                         <div class="col-md-6 form-group">
-                            <input name="phone" type="tel" placeholder="Phone *" [(ngModel)]="data.phone" required [ngModelOptions]="{standalone: true}"> 
+                            <input name="phone" type="tel" placeholder="Teléfono *" [(ngModel)]="data.phone" required [ngModelOptions]="{standalone: true}"> 
                         </div>
                         <div class="col-md-12 form-group">
                             <input name="subject" type="text" placeholder="Are you interested in makeup/hair service? *" [(ngModel)]="data.makeup" name="name" required  [ngModelOptions]="{standalone: true}"> 
                         </div>
                         <div class="col-md-12 form-group">
-                            <textarea name="message" id="message" cols="30" rows="4" placeholder="Message *" [(ngModel)]="data.message" name="name" required  [ngModelOptions]="{standalone: true}"></textarea>
+                            <textarea name="message" id="message" cols="30" rows="4" placeholder="Mensaje *" [(ngModel)]="data.message" name="name" required  [ngModelOptions]="{standalone: true}"></textarea>
                         </div>
                         <div class="col-md-12">
-                            <input name="submit" type="submit" value="Send Message" (click)="onSubmit()">
+                            <input name="submit" type="submit" value="Enviar" (click)="onSubmit()">
                         </div>
                         
                     </div>

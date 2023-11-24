@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12" style="text-align: end;">
-                <h1>Photographic Products to Preserve Every Memory</h1>
+                <h1>Productos fotográficos para conservar todos los recuerdos</h1>
             </div>
         </div>
     </div>
@@ -13,12 +13,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <h2 class="signature1" style="color: darkgoldenrod;">Our Products</h2>
+                <h2 class="signature1" style="color: darkgoldenrod;">Productos</h2>
                 <hr class="line line-hr-center">
-                <p>From personalised baby portrait albums to elegant wedding and event portfolios</p>
-                <p>Our products are designed to reflect every emotion and detail, giving you a tangible and lasting way to relive your most precious memories. </p>
-                <h3 style="    padding-bottom: 5%;"> <strong> Choose from our variety of options and let us immortalise your stories through our unique photographic products.</strong> </h3>
-            </div>
+                <p>Desde álbumes personalizados de retratos de bebés hasta elegantes portafolios para bodas y eventos</p>
+                 <p>Productos diseñados para reflejar cada emoción y detalle, brindándole una forma tangible y duradera de revivir sus recuerdos más preciados. </p>
+                 <h3 style=" padding-bottom: 5%;"> <strong> Elija entre la variedad de opciones y permítame inmortalizar sus historias a través de  productos fotográficos únicos.</strong> </h3></div>
         </div>
         <div class="row">
             <div class="col-md-4" *ngFor="let products of allProducts; let i = index" (click)="viewProducts(products)">
@@ -32,7 +31,7 @@
                 </div>
                 <div style="text-align: center;  margin-bottom: 20px;">
                     <div class="services-subtitle" ><a >{{ products.name }}</a></div>
-                    <div class="services-title"><a (click)="viewProducts(products)">View details</a></div>
+                    <div class="services-title"><a (click)="viewProducts(products)">Ver detalles</a></div>
                 </div>
             </div>
             <!-- <div class="col-md-4">
