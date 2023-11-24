@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(album)" [hidden]="i >= 6">
+            <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(i)">
                 <div class="gallery-box">
                     <div class="gallery-img">
                         <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
@@ -32,72 +32,3 @@
     </div>
 </div>
 <!-- Video Gallery -->
-<!-- <div class="section-padding bg-1">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h2>Video Gallery</h2>
-                <hr class="line line-hr-center">
-            </div>
-        </div>
-        <div class="row">
-           
-            <div class="col-md-6">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/10.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/11.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/12.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/13.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="vid-area mb-30">
-                    <div class="vid-icon"> <img src="assets/assetsEli/images/gallery/14.jpg" alt="">
-                        <a class="video-gallery-button vid" href="https://www.youtube.com/watch?v=teLhLLlhfzc&ab_channel=Marcus%26Kristin">
-                            <span class="video-gallery-polygon">
-                                <i class="ti-control-play"></i>
-                            </span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->
