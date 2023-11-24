@@ -42,6 +42,13 @@ background: #f5f0ec;
         max-width: 100%;
         height: 300px;
     }
+    .services-img{
+        vertical-align: middle;
+        height: auto;}
+}
+.services-img{
+        vertical-align: middle;
+        height: 560px;
 }
 .gallery-img {
     overflow: hidden;
