@@ -17,7 +17,7 @@ export class Yeoman {
     description2: "",
     description3: "",
     ref:"",
-    itemServices: [{item:'' }]
+    
   };
   previewPackages:any={
     images: [
@@ -117,7 +117,7 @@ previewAlbums:any={
   email:string=""; 
   cards:any[]=[]; 
   serialT:number=0;
-  
+  galleryImages: any;
   config: {
     clientSelected:number;
   } = {clientSelected:-1} ;
@@ -130,5 +130,7 @@ previewAlbums:any={
     restUrl: "https://db.buckapi.com:9032",
     GQLUrl: "<origin GQL url>",
   };
+  
+  
   constructor() { }
 }

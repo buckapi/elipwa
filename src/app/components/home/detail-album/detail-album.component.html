@@ -1,9 +1,12 @@
 <div class="post-section">
     <div class="container"  style="padding-top: 2%;">
         <div class="row">
-           <!--  <div class="col-md-12" style="padding-bottom: 2%;">
-                <button class=""  (click)="setRoute('packages')">Albums</button>
-            </div> -->
+            <ngx-gallery [options]="galleryOptions" [images]="yeoman.galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
+
+            
+        </div>
+        <div class="row">
+          
             <div class="col-md-12 mt-5">
                 <div class="post-caption">
                     <h3 class="signature1" >{{yeoman.previewAlbums.name}}</h3>
@@ -13,14 +16,10 @@
         <div class="row">
             <div class="col-md-12">
                 
-                <img src="{{yeoman.previewAlbums.images[0]}}" class="img-responsive" alt=""> 
+                <!-- <img src="{{yeoman.previewAlbums.images[0]}}" class="img-responsive" alt="">  -->
              </div>
         </div>
-        <div class="row">
-            <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
-
-            
-        </div>
+        
         <!-- <div class="row mb-5">
             <div class="col-md-12">
                 <p>Tristique nisl felis at volutpat erat hendrerit drana. Proin ultricies nibhe dolye maximus scelerisque. Integer molliser faucibus neque nec tincidunt. Aliuam eraolutpat. Praeser tempor maluada quam. Louise ultricies nibh non dolor maximus sceleue. Integer molliser fauci nune etincidunte. Aliquam erat volutpat. Praeser tempor maladi quam nec rutrum arcu ornare sed. Duru egiter ligula at nibh viverra ultricies.</p>

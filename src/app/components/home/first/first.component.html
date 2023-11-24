@@ -227,7 +227,7 @@
           
         <div class="row">
             <div class="col-md-12 botonAll">
-                <button class=""  (click)="setRoute('Portfolio')">View all gallery</button>
+                <button class=""  (click)="setRoute('portfolio')">View all gallery</button>
             </div>
             <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(i)" [hidden]="i >= 6">
                 <div class="gallery-box">

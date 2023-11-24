@@ -20,6 +20,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailAlbumComponent } from './detail-album/detail-album.component';
+import { previewAlbum } from '@app/services/previewAlbum.service';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { DetailAlbumComponent } from './detail-album/detail-album.component';
     PortfolioComponent,
     DetailAlbumComponent
   ],
+  providers: [previewAlbum],
   imports: [
     FormsModule,
     NgxGalleryModule,

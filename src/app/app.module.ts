@@ -13,6 +13,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { previewAlbum } from './services/previewAlbum.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     NgbModule
   ],
-  providers: [],
+  providers: [previewAlbum],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

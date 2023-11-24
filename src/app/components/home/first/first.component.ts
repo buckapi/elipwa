@@ -20,6 +20,7 @@ import { previewAlbum } from '@app/services/previewAlbum.service';
     ]),
   ],
 })
+
 export class FirstComponent implements AfterViewInit {
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
@@ -157,12 +158,22 @@ export class FirstComponent implements AfterViewInit {
     this.setRoute('detail-products');
   }
   viewAlbums(i:any){
-    this.yeoman.previewAlbums=this.allAlbums[i];
-
-    this.previewAlbum.album=[];
-    this.previewAlbum.album=this.allAlbums[i];
-    this.previewAlbum.i=i;
-    console.log(this.previewAlbum.album)
+    this.yeoman.galleryImages=[];
+    this.galleryImages=[];
+    let album=this.allAlbums[i];
+    console.log(album)
+    if (album != undefined ) {
+      for (let i = 0; i < album.images.length; i++) {
+        console.log("Imagen", album.images[i]);
+        this.galleryImages.push({
+          small: album.images[i],
+          medium: album.images[i],
+          big: album.images[i]
+        });
+      }
+      
+      this.yeoman.galleryImages=this.galleryImages;
+    }
     this.setRoute('detail-album');
   }
   setRoute(par:any){
