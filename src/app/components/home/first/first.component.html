@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12 text-center">
-                <div class="signature2" ><h2>Professional Photography for Every Occasion</h2></div>
+                <div class="signature2" ><h2 style="padding-bottom: 30px;">Professional Photography for Every Occasion</h2></div>
                 <div class="signature" style="cursor: pointer;" (click)="setRoute('shop')">Services</div>
             </div>
         </div> 
@@ -95,35 +95,6 @@
     </div>
     </div>
 <!-- About -->
-<!-- <div class="section-padding about">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-5 offset-1">
-                <div class="about-img">
-                    <div class="img">
-                        <img src="assets/assetsEli/images/about.jpg" alt="">
-                    </div>
-                    <div class="signature">Eli Quintalla</div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <h2 class="signature1">About my</h2>
-                <hr class="line line-hr-left">
-                <div >Capturing Life's Precious Moments</div>
-                <p></p>
-                <p>My camera is an extension of my vision to discover and celebrate joy, love and togetherness, making each image tell a unique and personal story.
-                    Let me be a part of your most precious moments, capturing them for you to treasure forever.
-                </p>
-                <p>I am of Salvadorian origin and fluent in English and Spanish, my multicultural perspective enriches my photography. Married and a mother of three, with three grandchildren, I understand the importance of every moment in life. 
-                    With my camera, I capture with love and authenticity from the sweetness of a newborn to the joy of a birthday, preserving your most precious memories. Let me tell your story through my images.</p>
-                <div class="cont">
-                     <a class="more" data-splitting style="color: #a2783a;"><span>Read More</span></a>
-                </div>      
-            </div>
-            
-        </div>
-    </div>
-</div> -->
 <div class="section-padding">
     <div class="container">
         <div class="row">
@@ -153,7 +124,7 @@
 </div>
 <!-- productos -->
 <div class="testimonials">
-    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/productos.jpg"> </div>
+    <div class="background bg-fixed bg-img" data-overlay-dark="2" data-background="assets/assetsEli/images/banner/2.jpg"> </div>
         <div class="container">
             <div class="row">
                 <div class="col-md-12 text-center">
@@ -174,9 +145,9 @@
                                         <div class="cont">
                                             <div class="img"> <img src="{{products.images[0]}}" alt=""> </div>
                                             <div class="info">
-                                                <h4>{{products.name}}</h4> 
+                                                <h4 class="title-prod">{{products.name}}</h4> 
 <!--                                                 <h5>{{products.size}}</h5> 
- -->                                                <span (click)="viewProducts(products)" style="text-align: center; font-size: 13px; padding-left: 70px;">See now</span> 
+ -->                                               <h3> <span class="span-prod" (click)="viewProducts(products)">See now</span> </h3>
                                             </div>
                                         </div>
                                     </div>
@@ -255,6 +226,9 @@
         </div>
           
         <div class="row">
+            <div class="col-md-12 botonAll">
+                <button class=""  (click)="setRoute('Portfolio')">View all gallery</button>
+            </div>
             <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(i)" [hidden]="i >= 6">
                 <div class="gallery-box">
                     <div class="gallery-img">
@@ -262,23 +236,14 @@
                     </div>
                     <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
                 </div>
+                <div class="services-subtitle" style="padding-top: 20px; text-align: center;"><a >{{album.name}}</a></div>
+
             </div>
             
 <!--    <ngx-gallery [options]="galleryOptions" [images]="galleryImages" class="ngx-gallery" style="background-color: white;"></ngx-gallery>
  -->     
-            <!-- <div class="col-md-4 gallery-item" *ngFor="let album of allAlbums; let i = index" (click)="viewAlbums(allAlbums)">
-                <a href="{{album.images[0]}}" class="img-zoom">
-                    <div class="gallery-box">
-                        <div class="gallery-img">
-                            <img src="{{album.images[0]}}" class="img-fluid mx-auto d-block" alt="">
-                        </div>
-                        <div class="gallery-detail text-center"> <i class="ti-heart"></i> </div>
-                    </div>
-                </a>
-            </div> -->
+           
              
-            
-        
         </div>
     </div>
 </div>
