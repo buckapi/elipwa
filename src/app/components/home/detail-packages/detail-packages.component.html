@@ -27,28 +27,33 @@
 
             <div class="col-md-6">
                 <h5>Que incluye</h5>
-                <p><b>2.</b><strong class="">Numero de personas:</strong> {{yeoman.previewPackages.numberPeople}}</p>
-                <p><b>3.</b><strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
-                <p><b>4.</b><strong class="">Sesiones:</strong> {{yeoman.previewPackages.numberSession}}</p>
-                <p><b>5.</b><strong class="">Duración:</strong> {{yeoman.previewPackages.duration}}</p>
-                <b>6.</b> <strong class="">Lugar:</strong>
+                <p><strong class="">Numero de personas:</strong> {{yeoman.previewPackages.numberPeople}}</p>
+                <p><strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
+                <p><strong class="">Sesiones:</strong> {{yeoman.previewPackages.sesiones}}</p>
+                <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
+
+                <p><strong class="">Duración:</strong> {{yeoman.previewPackages.duration}}</p>
+
+                <strong class="">Lugar:</strong>
                 <ul>
                     <li *ngFor="let placeSession of yeoman.previewPackages.placeSessions">{{placeSession.place}}</li>
                 </ul>
 
-                <b>7.</b> <strong class="">Vestuario y otros items:</strong>
+               <strong class="">Vestuario y otros items:</strong>
                 <ul>
                     <li *ngFor="let clothing of yeoman.previewPackages.clothings">{{clothing.cloth}}</li>
                 </ul>
 
-                <b>8.</b> <strong class="">Que incluye el album:</strong>
+               <strong class="">Que incluye el album:</strong>
                 <ul>
                     <li *ngFor="let include of yeoman.previewPackages.includes">{{include.inclu}}</li>
                 </ul>
-                <b>9.</b> <strong class="">Notas:</strong>
+                <strong class="">Notas:</strong>
                 <ul>
                     <li *ngFor="let note of yeoman.previewPackages.notes">{{note.not}}</li>
                 </ul>
+                <p> {{yeoman.previewPackages.not}}</p>
+
             </div>
             <div class="col-md-6  faqs-accordion">
                 <div class="col-md-12 text-center">

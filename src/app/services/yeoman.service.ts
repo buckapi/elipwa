@@ -34,7 +34,9 @@ export class Yeoman {
     price:'',
     numberSession:'',
     duration:'',
-    note:'',
+    not:'',
+    sesion:'',
+    note:[{not:''}],
     includes:[{inclu:''}],
     idCategory:'',
     faqs: [{ p: '', r: '' }]
