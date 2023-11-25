@@ -12,22 +12,9 @@
                 <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
                 <h4>{{yeoman.previewPackages.name}}</h4>
                 <h4><strong class="">Precio:</strong>$ {{yeoman.previewPackages.price}}</h4>
-                <p>{{yeoman.previewPackages.description}}</p>
-            </div>
-         
-        </div>
-        <div class="row">
-            <!-- <div class="col-md-6">
-                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
-                <h4>{{yeoman.previewPackages.name}}</h4>
-                <h4><strong class="">Price:</strong>$ {{yeoman.previewPackages.price}}</h4>
-            </div> -->
-        </div>
-        <div class="row ">
-
-            <div class="col-md-6">
                 <h5>Que incluye</h5>
-                <p><strong class="">Numero de personas:</strong> {{yeoman.previewPackages.numberPeople}}</p>
+                <p>Valido para el evento</p>
+                <p><strong class=""></strong> {{yeoman.previewPackages.numberPeople}}</p>
                 <p><strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
                 <p><strong class="">Sesiones:</strong> {{yeoman.previewPackages.sesiones}}</p>
                 <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
@@ -48,6 +35,22 @@
                 <ul>
                     <li *ngFor="let include of yeoman.previewPackages.includes">{{include.inclu}}</li>
                 </ul>
+               
+            </div>
+         
+        </div>
+        <div class="row">
+            <!-- <div class="col-md-6">
+                <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
+                <h4>{{yeoman.previewPackages.name}}</h4>
+                <h4><strong class="">Price:</strong>$ {{yeoman.previewPackages.price}}</h4>
+            </div> -->
+        </div>
+        <div class="row ">
+
+            <div class="col-md-6">
+                Sobre que trata este evento:
+                <p>{{yeoman.previewPackages.description}}</p>
                 <strong class="">Notas:</strong>
                 <ul>
                     <li *ngFor="let note of yeoman.previewPackages.notes">{{note.not}}</li>

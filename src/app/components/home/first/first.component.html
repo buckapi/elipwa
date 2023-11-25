@@ -135,14 +135,14 @@
             </div>
             
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-12" style="padding-top: 2%;">
                     <div class="testim">
                         <swiper [config]="config2">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide box" *ngFor="let products of allProducts;  let i = index" (click)="setRoute('products')">
                                     <div class="item">
                                         <div class="cont">
-                                            <div class="img"> <img src="{{products.images[0]}}" alt=""> </div>
+                                            <div class="prod-img"> <img src="{{products.images[0]}}" alt=""> </div>
                                             <div class="info">
                                                 <h4 class="title-prod">{{products.name}}</h4> 
 <!--                                                 <h5>{{products.size}}</h5> 
