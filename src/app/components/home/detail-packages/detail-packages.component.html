@@ -16,10 +16,10 @@
                 <p>Valido para el evento</p>
                 <p><strong class=""></strong> {{yeoman.previewPackages.numberPeople}}</p>
                 <p><strong class=""></strong> {{yeoman.previewPackages.sesiones}}</p>
+                <p><strong class=""></strong> {{yeoman.previewPackages.duration}}</p>
                 <p><strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
                 <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
-                <p><strong class="">Duración:</strong> {{yeoman.previewPackages.duration}}</p>
-                <strong class="">Lugar:</strong>
+                <strong class="">Escenas del Día:</strong>
                 <ul>
                     <li *ngFor="let placeSession of yeoman.previewPackages.placeSessions">{{placeSession.place}}</li>
                 </ul>
