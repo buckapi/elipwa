@@ -21,7 +21,7 @@ import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DetailAlbumComponent } from './detail-album/detail-album.component';
 import { previewAlbum } from '@app/services/previewAlbum.service';
-
+import { LightgalleryModule } from 'lightgallery/angular';
 @NgModule({
   declarations: [
     HomeComponent,
@@ -41,6 +41,7 @@ import { previewAlbum } from '@app/services/previewAlbum.service';
   providers: [previewAlbum],
   imports: [
     FormsModule,
+    LightgalleryModule,
     NgxGalleryModule,
     ReactiveFormsModule,
     NgxUsefulSwiperModule,

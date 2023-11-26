@@ -5,12 +5,17 @@ import { Yeoman } from '@app/services/yeoman.service';
 import { NgxGalleryOptions } from '@kolkov/ngx-gallery';
 import { NgxGalleryImage } from '@kolkov/ngx-gallery';
 import { NgxGalleryAnimation } from '@kolkov/ngx-gallery';
+import { Lightbox } from 'ngx-lightbox';
+import lgThumbnail from 'lightgallery/plugins/thumbnail'
+import lgZoom from 'lightgallery/plugins/zoom'
 @Component({
   selector: 'app-detail-album',
   templateUrl: './detail-album.component.html',
   styleUrls: ['./detail-album.component.css']
 })
 export class DetailAlbumComponent implements OnInit, AfterViewInit {
+
+  public _albums: any = [];
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   allAlbums: any;
@@ -25,11 +30,27 @@ export class DetailAlbumComponent implements OnInit, AfterViewInit {
     idCategory: '',
   };
   constructor(
+    public _lightbox: Lightbox,
     public yeoman: Yeoman,
     public restService: RestService,
     public previewAlbum: previewAlbum
   ) {
-    
+    if (this.yeoman.galleryImages) {
+      for (let i = 0; i < this.yeoman.galleryImages.length; i++) {
+        console.log(JSON.stringify(this.yeoman.galleryImages[i]))
+        const src = JSON.stringify(this.yeoman.galleryImages[i]);
+        const caption = 'Image ' + (i + 1) + ' caption here';
+        const thumb = src; // Si tienes una versión en miniatura, úsala aquí
+        const album = {
+          src: src,
+          caption: caption,
+          thumb: thumb
+        };    
+        console.log(JSON.stringify(album))
+        this._albums.push(album);
+      }
+    }
+
     // this.getAllAlbums()
     
   }
@@ -37,6 +58,15 @@ export class DetailAlbumComponent implements OnInit, AfterViewInit {
     let parametro = par;
     this.yeoman.virtualRoute = parametro;
     window.scrollTo(0, 0);
+  }
+  open(index: number): void {
+    // open lightbox
+    this._lightbox.open(this.yeoman._albums, index);
+  }
+
+  close(): void {
+    // close lightbox programmatically
+    this._lightbox.close();
   }
 
   // getAllAlbums() {
@@ -61,9 +91,11 @@ export class DetailAlbumComponent implements OnInit, AfterViewInit {
   // }
   
   ngAfterViewInit(): void {
+  
     // this.getAllAlbums()
   }
   ngOnInit(): void {
+ 
 
     // this.getAllAlbums()
     this.galleryOptions = [

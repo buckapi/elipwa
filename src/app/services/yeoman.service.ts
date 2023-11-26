@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class Yeoman {
   isLoaded:Boolean=false;
+  _albums:any;
   virtualRoute:string="first";
   categorySelected:string="first";
    previewCategory:any={

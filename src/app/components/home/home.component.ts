@@ -5,7 +5,9 @@ import { Yeoman } from '@app/services/yeoman.service';
 import { HttpClient } from '@angular/common/http';
 import { RestService } from '@app/services/rest.service';
 import { SwiperOptions } from 'swiper';
-
+import { LightgalleryModule } from 'lightgallery/angular/13';
+import lgZoom from 'lightgallery/plugins/zoom';
+import { BeforeSlideDetail } from 'lightgallery/lg-events';
 import * as $ from 'jquery';
 @Component({
   selector: 'app-home',

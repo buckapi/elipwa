@@ -14,7 +14,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgxGalleryModule } from '@kolkov/ngx-gallery';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { previewAlbum } from './services/previewAlbum.service';
-
+import { LightboxModule } from 'ngx-lightbox';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +26,8 @@ import { previewAlbum } from './services/previewAlbum.service';
   imports: [
     BrowserAnimationsModule,
     NgxGalleryModule,
+
+    LightboxModule,
     HttpClientModule,
     NgxUsefulSwiperModule,
     BrowserModule,
