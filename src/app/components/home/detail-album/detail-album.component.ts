@@ -68,9 +68,37 @@ export class DetailAlbumComponent implements OnInit, AfterViewInit {
     // this.getAllAlbums()
     this.galleryOptions = [
       {
+        width: '100%', // Usa el 100% del ancho del contenedor
+        height: '800px', // Altura automática para mantener la proporción de la imagen
+        thumbnailsColumns: 4,
+        arrowPrevIcon: 'fa fa-chevron-left',
+        arrowNextIcon: 'fa fa-chevron-right',
+        imageAnimation: NgxGalleryAnimation.Slide,
+        imageSize: 'contain' // Asegúrate de que las imágenes se ajusten sin recortar
+      },
+
+      {
+        breakpoint: 800,
+        width: '100%',
+        height: '600px', // Ajustado para una mejor visualización
+        imagePercent: 100,
+        thumbnailsPercent: 20,
+        thumbnailsMargin: 10, // Reducido para pantallas más pequeñas
+        thumbnailMargin: 10
+      },
+      {
+        breakpoint: 400,
+        preview: false,
+        height: '600px' // Opcional, ajustar según sea necesario
+      }
+             
+      
+    ];
+    /* this.galleryOptions = [
+      {
         width: '50%',
         height: '400px',
-        thumbnailsColumns: 4,
+        thumbnailsColumns: 6,
         previewCloseOnEsc: true,
         previewKeyboardNavigation: true,
         previewArrows: true,
@@ -108,7 +136,7 @@ export class DetailAlbumComponent implements OnInit, AfterViewInit {
         previewKeyboardNavigation: true,
         previewFullscreen: true
       }
-    ];
+    ]; */
     // this.galleryImages = [
     // ];
   }

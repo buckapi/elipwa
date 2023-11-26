@@ -3,3 +3,22 @@
     color: darkgoldenrod;
     text-align: center; padding-bottom: 2%;
 }
+
+.ngx-gallery / * Aquí va el selector correcto para tus imágenes * / {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Otra opción puede ser 'contain' dependiendo de cómo desees que se muestren las imágenes */
+  }
+  
+  @media (max-width: 800px) {
+    .ngx-gallery / * Selector correcto * / {
+      max-height: 400px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .ngx-gallery / * Selector correcto * / {
+      max-height: 300px;
+    }
+  }
+  
