@@ -15,10 +15,10 @@
                 <h5>Que incluye</h5>
               <!--   <p>Valido para el evento</p> -->
                 <p><strong class=""></strong> {{yeoman.previewPackages.numberPeople}}</p>
-                <p><strong class=""></strong> {{yeoman.previewPackages.sesiones}}</p>
-                <p><strong class=""></strong> {{yeoman.previewPackages.duration}}</p>
-                <strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}
                 <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
+                <p><strong class=""></strong> {{yeoman.previewPackages.duration}}</p>
+
+                <strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}
                 <p></p>
                 <strong class="">Lugares:</strong>
                 <ul>

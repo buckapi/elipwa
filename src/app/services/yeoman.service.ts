@@ -33,7 +33,7 @@ export class Yeoman {
     clothings: [{cloth:'' }],
     numberPhoto: '',
     price:'',
-    numberSession:'',
+    numberSessions:[{sesion:''}],
     duration:'',
     not:'',
     sesion:'',
