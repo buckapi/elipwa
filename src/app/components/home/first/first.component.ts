@@ -170,6 +170,7 @@ export class FirstComponent implements AfterViewInit {
     this.setRoute('detail-products');
   }
   viewAlbums(i:any){
+    this._albums=[];
     this.yeoman.galleryImages=[];
     this.galleryImages=[];
     let album=this.allAlbums[i];

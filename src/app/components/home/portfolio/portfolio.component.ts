@@ -59,7 +59,10 @@ export class PortfolioComponent implements OnInit {
     });
   }
 
+
+  
   viewAlbums(i:any){
+    this._albums=[];
     this.yeoman.galleryImages=[];
     this.galleryImages=[];
     let album=this.allAlbums[i];
