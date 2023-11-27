@@ -18,6 +18,7 @@ import { previewAlbum } from '@app/services/previewAlbum.service';
   ]
 })
 export class PortfolioComponent implements OnInit {
+  public _albums: any = [];
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   allAlbums:any;
@@ -37,19 +38,27 @@ export class PortfolioComponent implements OnInit {
         let size = this.allAlbums.length;
         for(let i = 0;i<size;i++ ){
           console.log(this.allAlbums[i])
-          this.galleryImages.push({
-            small: ''+this.allAlbums[i].images[0],
-            medium: ''+this.allAlbums[i].images[0],
-            big: ''+this.allAlbums[i].images[0]
-          })
+       
+        }
+      }
+      if (this.yeoman.galleryImages) {
+        for (let i = 0; i < this.yeoman.galleryImages.length; i++) {
+          console.log(JSON.stringify(this.yeoman.galleryImages[i]))
+          const src = JSON.stringify(this.yeoman.galleryImages[i]);
+          const caption = 'Image ' + (i + 1) + ' caption here';
+          const thumb = src; // Si tienes una versión en miniatura, úsala aquí
+          const album = {
+            src: src,
+            caption: caption,
+            thumb: thumb
+          };    
+          console.log(JSON.stringify(album))
+          this.yeoman._albums.push(album);
         }
       }
     });
   }
- /*  viewAlbums(albums:any){
-    this.yeoman.previewAlbums=albums;
-    this.setRoute('detail-album');
-  } */
+
   viewAlbums(i:any){
     this.yeoman.galleryImages=[];
     this.galleryImages=[];
@@ -58,13 +67,21 @@ export class PortfolioComponent implements OnInit {
     if (album != undefined ) {
       for (let i = 0; i < album.images.length; i++) {
         console.log("Imagen", album.images[i]);
+        
         this.galleryImages.push({
           small: album.images[i],
           medium: album.images[i],
           big: album.images[i]
         });
+       
+          this._albums.push({
+          src: album.images[i],
+          caption: "",
+          thumb: album.images[i]})
+        
+       ;
       }
-      
+      this.yeoman._albums=this._albums;
       this.yeoman.galleryImages=this.galleryImages;
     }
     this.setRoute('detail-album');

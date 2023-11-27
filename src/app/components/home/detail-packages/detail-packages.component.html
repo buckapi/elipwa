@@ -10,16 +10,17 @@
             </div>
             <div class="col-md-6 top2">
                 <h3 class="signature1">{{yeoman.previewPackages.title}}</h3>
-                <h4>{{yeoman.previewPackages.name}}</h4>
-                <h4><strong class="">Precio:</strong>$ {{yeoman.previewPackages.price}}</h4>
+<!--                 <h4>{{yeoman.previewPackages.name}}</h4>
+ -->            <h4><strong class="">Precio:</strong>$ {{yeoman.previewPackages.price}}</h4>
                 <h5>Que incluye</h5>
-                <p>Valido para el evento</p>
+              <!--   <p>Valido para el evento</p> -->
                 <p><strong class=""></strong> {{yeoman.previewPackages.numberPeople}}</p>
                 <p><strong class=""></strong> {{yeoman.previewPackages.sesiones}}</p>
                 <p><strong class=""></strong> {{yeoman.previewPackages.duration}}</p>
-                <p><strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}</p>
+                <strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}
                 <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
-                <strong class="">Escenas del Día:</strong>
+                <p></p>
+                <strong class="">Lugares:</strong>
                 <ul>
                     <li *ngFor="let placeSession of yeoman.previewPackages.placeSessions">{{placeSession.place}}</li>
                 </ul>
@@ -27,7 +28,7 @@
                 <ul>
                     <li *ngFor="let clothing of yeoman.previewPackages.clothings">{{clothing.cloth}}</li>
                 </ul>
-               <strong class="">Que incluye el album:</strong>
+               <strong class="">¿Que incluye la sesion?</strong>
                 <ul>
                     <li *ngFor="let include of yeoman.previewPackages.includes">{{include.inclu}}</li>
                 </ul>
@@ -43,7 +44,7 @@
         <div class="row ">
 
             <div class="col-md-6">
-                Sobre que trata este evento:
+                <strong class="">¿Sobre que trata la sesion?</strong> 
                 <p>{{yeoman.previewPackages.description}}</p>
                 <strong class="">Notas:</strong>
                 <ul>
