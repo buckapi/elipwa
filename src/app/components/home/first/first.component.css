@@ -104,10 +104,29 @@ background: #f5f0ec;
         font-size: x-small;}
         .testimonials .item .info span{
             font-size:10px;}
+            .services-subtitle{
+                text-align: center;
+            }
 }
 .testimonials .item .info span{
     font-size:13px;
 }
+
+.services-subtitle{
+    text-align: center;
+}
+@media screen and (max-width: 600px) {
+    .texto-box {
+        margin-left: 20px; /* Margen izquierdo */
+        margin-right: 20px; /* Margen derecho */
+        padding: 10px; 
+        text-align: center;
+    }
+    
+}
+h5 {
+    font-size: 1.25rem;
+    text-align: center;}
 
 
 

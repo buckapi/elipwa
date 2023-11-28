@@ -5,7 +5,7 @@
 }
 .signature2{
     font-family: Signatie;
-
+    text-align: center;
 }
 .p{
     text-align: justify;
@@ -18,3 +18,12 @@
 }
 a {
     color: darkgoldenrod;}
+@media screen and (max-width: 600px) {
+    .texto-box {
+        margin-left: 20px; /* Margen izquierdo */
+        margin-right: 20px; /* Margen derecho */
+        padding: 10px; 
+        text-align: center;
+    }
+    
+}
