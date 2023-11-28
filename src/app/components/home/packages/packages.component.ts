@@ -18,6 +18,7 @@ export class PackagesComponent implements OnInit {
  getAllPackages(){
    this.restService.getAllPackages().subscribe(response=>{
      this.allPackages=response;
+     this.yeoman.allPackages=response;
    });
  }
  setRoute(par:any){

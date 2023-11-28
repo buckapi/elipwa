@@ -48,6 +48,28 @@
                 </div> 
             </div>
         </div>
+        <div class="section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <h2>Our Services</h2>
+                        <hr class="line line-hr-center">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let package of yeoman.allPackages; let i = index" [hidden]="package.idCategory!== yeoman.previewCategory.id">
+                        <div class="services-item">
+                            <img class="services-img" src="{{package.images[0]}}" alt="">
+                                <div class="services-caption">
+                                    <div class="services-subtitle"><a href="services-page.html">Weddings</a></div>
+                                        <div class="services-title"><a href="services-page.html">Wedding Planner</a></div>
+                                </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
        <!--  <div class="container" style=" padding-top: 30px;"> 
         <div class="row">
             <div class="col-md-12">
