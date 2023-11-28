@@ -12,25 +12,22 @@
                 <!-- <h3 class="signature1">{{yeoman.previewPackages.title}}</h3> -->
                 <h3 class="signature1">{{yeoman.previewPackages.name}}</h3>
                 <h4><strong class="">Precio:</strong>$ {{yeoman.previewPackages.price}}</h4>
-                <h5>Que incluye</h5>
-              <!--   <p>Valido para el evento</p> -->
-                <p><strong class=""></strong> {{yeoman.previewPackages.numberPeople}}</p>
-                <p *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</p>
-                <p><strong class=""></strong> {{yeoman.previewPackages.duration}}</p>
-
-                <strong class="">Cantidad de fotos:</strong> {{yeoman.previewPackages.numberPhoto}}
-                <p></p>
+             
                 <strong class="">Lugares:</strong>
                 <ul>
                     <li *ngFor="let placeSession of yeoman.previewPackages.placeSessions">{{placeSession.place}}</li>
                 </ul>
                <strong class="">Vestuario y otros items:</strong>
                 <ul>
-                    <li *ngFor="let clothing of yeoman.previewPackages.clothings">{{clothing.cloth}}</li>
+                    <li *ngFor="let clothing of yeoman.previewPackages.clothings"> {{clothing.cloth}}</li>
                 </ul>
                <strong class="">¿Que incluye la sesion?</strong>
                 <ul>
-                    <li *ngFor="let include of yeoman.previewPackages.includes">{{include.inclu}}</li>
+                    <li> <strong> {{yeoman.previewPackages.numberPeople}}</strong> </li>
+                    <li *ngFor="let numberSession of yeoman.previewPackages.numberSessions">{{numberSession.place}}</li>
+                    <li> <strong> {{yeoman.previewPackages.duration}}</strong></li>
+                    <li> {{yeoman.previewPackages.numberPhoto}}</li>
+                    <li *ngFor="let include of yeoman.previewPackages.includes"> {{include.inclu}}</li>
                 </ul>
             </div>
         </div>
@@ -45,12 +42,12 @@
 
             <div class="col-md-6">
                 <strong class="">¿Sobre que trata la sesion?</strong> 
-                <p>{{yeoman.previewPackages.description}}</p>
+               <p> {{yeoman.previewPackages.description}}</p>
                 <strong class="">Notas:</strong>
                 <ul>
-                    <li *ngFor="let note of yeoman.previewPackages.notes">{{note.not}}</li>
+                    <li *ngFor="let note of yeoman.previewPackages.notes" ti-pencil-alt><i class="ti-heart"></i> {{note.not}}</li>
+                    <li><i class="ti-heart"></i> {{yeoman.previewPackages.not}}</li>
                 </ul>
-                <p> {{yeoman.previewPackages.not}}</p>
 
             </div>
             <div class="col-md-6  faqs-accordion">
