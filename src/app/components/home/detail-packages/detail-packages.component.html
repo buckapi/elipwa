@@ -2,9 +2,13 @@
 <div class="bethany-services-section mb-60">
     <div class="container" *ngIf="yeoman.previewPackages!==undefined">
         <div class="row">
-            <div class="col-md-12" style="padding-bottom: 2%;">
+            <!-- <div class="col-md-6" style="padding-bottom: 2%;">
                 <button class=""  (click)="setRoute('packages')">Todos los paquetes</button>
+            </div> -->
+            <div class="col-md-12" style="padding-bottom: 2%;">
+                <button class=""  (click)="setRoute('detail')">Ver mas paquetes de este servicio</button>
             </div>
+            
             <div class="col-md-6 mb-30">                 
                 <img  src="{{yeoman.previewPackages.images[0]}}" alt=""> 
             </div>
@@ -45,7 +49,7 @@
                <p> {{yeoman.previewPackages.description}}</p>
                 <strong class="">Notas:</strong>
                 <ul>
-                    <li *ngFor="let note of yeoman.previewPackages.notes" ti-pencil-alt><i class="ti-heart"></i> {{note.not}}</li>
+                    <li *ngFor="let note of yeoman.previewPackages.notes"> {{note.not}}</li>
                     <li> {{yeoman.previewPackages.not}}</li>
                 </ul>
 

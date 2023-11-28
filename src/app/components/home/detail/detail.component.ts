@@ -39,9 +39,9 @@ export class DetailComponent implements AfterViewInit {
   this.yeoman.virtualRoute=parametro;
   window.scrollTo(0, 0);
   }
-  viewPackages(packages:any){
+  viewPreviewPackages(packages:any){
     this.yeoman.previewPackages=packages;
-    this.setRoute('detail');
+    this.setRoute('detail-packages');
   }
   ngAfterViewInit(): void {
    this.cdr.detectChanges();
